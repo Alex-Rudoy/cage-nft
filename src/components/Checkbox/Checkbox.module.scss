@@ -1,0 +1,60 @@
+@use '../../styles/mixins.scss';
+
+.checkbox {
+  user-select: none;
+  position: relative;
+
+  svg {
+    opacity: 0;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    @include mixins.flex(row, unset, center);
+    max-width: max-content;
+    cursor: pointer;
+  }
+
+  &_box {
+    @include mixins.flex(row, center, center);
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    background: var(--white);
+    margin-right: 8px;
+  }
+
+  &.checked .checkbox_box {
+    border-color: var(--primary-600);
+    background: var(--primary-50);
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .checkbox_box {
+      border-color: var(--primary-600);
+      background: var(--primary-50);
+    }
+
+    &.checked .checkbox_box {
+      border-color: var(--primary-700);
+      background: var(--primary-100);
+    }
+  }
+
+  &.disabled label {
+    cursor: not-allowed;
+
+    .checkbox_box {
+      border-color: var(--gray-200) !important;
+      background: var(--gray-100) !important;
+    }
+  }
+}

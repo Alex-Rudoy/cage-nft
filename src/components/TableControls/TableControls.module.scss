@@ -1,0 +1,29 @@
+@use '../../styles/mixins.scss';
+
+.tableControls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  @include mixins.flex(row, unset, center);
+  gap: 24px;
+  padding: 0 24px;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0px,
+    var(--primary-50) 20px,
+    var(--primary-50) 1000px
+  );
+  opacity: 0;
+
+  stroke: var(--gray-500);
+
+  svg:hover {
+    stroke: var(--primary-500);
+    cursor: pointer;
+  }
+}
+
+td:hover .tableControls {
+  opacity: 1;
+}

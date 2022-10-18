@@ -1,0 +1,23 @@
+export type colorType =
+  | 'unset'
+  | 'inherit'
+  | 'white'
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | `${'gray'}-${
+      | '05'
+      | '10'
+      | '15'
+      | '20'
+      | '30'
+      | '40'
+      | '50'
+      | '60'
+      | '70'
+      | '80'
+      | '85'
+      | '90'
+      | '95'
+      | '100'}`;

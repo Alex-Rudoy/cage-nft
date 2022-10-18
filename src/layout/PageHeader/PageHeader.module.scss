@@ -1,0 +1,27 @@
+@use '../../styles/mixins.scss';
+
+.pageHeader {
+  @include mixins.flex(row, space-between, center);
+  margin-bottom: 10px;
+  gap: 12px;
+  height: 40px;
+}
+
+.emptyDiv{
+  min-height: 50px;
+  margin-bottom: 24px;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.buttonGroup {
+  @include mixins.flex(row);
+  gap: 12px;
+}
+
+.whitespace {
+  flex: 1;
+}

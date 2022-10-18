@@ -1,0 +1,49 @@
+html {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--gray-900);
+  background: var(--gray-50);
+  overflow-y: hidden;
+}
+
+:root {
+  --transition-property: all;
+  --transition-time: 0.3s;
+  --transition-function: ease;
+}
+
+* {
+  box-sizing: border-box;
+  transition: var(--transition-property) var(--transition-time)
+    var(--transition-function);
+}
+
+a {
+  text-decoration: none;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+div {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.custom_tooltip {
+  box-shadow: var(--shadow-md);
+  transition: none !important;
+  z-index: 123123;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.react-flow__node {
+  cursor: default !important;
+}

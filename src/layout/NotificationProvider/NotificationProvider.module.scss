@@ -1,0 +1,10 @@
+@use '../../styles/mixins.scss';
+
+.notificationWrapper {
+  position: fixed;
+  right: 20px;
+  top: 40px;
+  gap: 16px;
+  z-index: 20;
+  @include mixins.flex(column, flex-start, flex-end);
+}

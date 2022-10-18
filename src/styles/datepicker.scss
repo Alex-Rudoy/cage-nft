@@ -1,0 +1,176 @@
+@use './mixins.scss';
+
+.react-datepicker {
+  position: relative;
+  max-width: 280px;
+  font-size: 14px;
+  @include mixins.flex(row, space-between, center, wrap);
+
+  &__triangle {
+    display: none;
+  }
+
+  &__navigation {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./images/arrow-chevron.svg');
+    background-color: transparent;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &-icon {
+      text-indent: -999em;
+      overflow: hidden;
+      @include mixins.flex(row, flex-start, center);
+    }
+    &--previous {
+      transform: rotate(90deg);
+    }
+
+    &--next {
+      transform: rotate(-90deg);
+      margin-left: auto;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__current-month {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: var(--gray-700);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    pointer-events: none;
+  }
+
+  &__day-names {
+    @include mixins.flex(row, flex-start, center);
+  }
+
+  &__week {
+    @include mixins.flex(row, flex-start, center);
+  }
+
+  &__day,
+  &__day-name {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: var(--gray-700);
+    @include mixins.flex(row, center, center);
+  }
+
+  &__month {
+    &-wrapper {
+      @include mixins.flex(row, flex-start, center);
+      width: 282px;
+    }
+    &-container {
+      margin-bottom: 20px;
+    }
+    &-text {
+      height: 40px;
+      flex: 1;
+      border-radius: 20px;
+      color: var(--gray-700);
+      @include mixins.flex(row, center, center);
+    }
+  }
+
+  &__day,
+  &__month-text,
+  &__month {
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      outline: none;
+      color: var(--primary-600);
+      border-color: var(--primary-600);
+    }
+
+    &--outside-month {
+      color: var(--gray-500);
+    }
+
+    &--today {
+      background: var(--gray-100);
+    }
+
+    &--selected,
+    &--in-range {
+      background: var(--primary-600);
+      color: var(--white);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+
+    &--in-range {
+      border-radius: 0;
+    }
+
+    &--range-start {
+      border-start-start-radius: 20px;
+      border-end-start-radius: 20px;
+    }
+
+    &--range-end {
+      border-start-end-radius: 20px;
+      border-end-end-radius: 20px;
+    }
+
+    &--disabled {
+      color: var(--gray-300);
+      cursor: not-allowed;
+
+      &:hover {
+        border: none;
+        color: var(--gray-300);
+      }
+    }
+  }
+
+  &__day-name {
+    font-weight: 500;
+  }
+
+  &-year-header {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: var(--gray-700);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    pointer-events: none;
+  }
+  &__input-time-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &-time__input input {
+    height: 40px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    box-shadow: var(--shadow-xs);
+    padding: 0 16px;
+    outline: none;
+    &:focus {
+      border-color: var(--primary-300);
+      box-shadow: var(--shadow-focus);
+    }
+  }
+}

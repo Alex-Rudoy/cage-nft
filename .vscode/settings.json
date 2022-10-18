@@ -1,0 +1,13 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

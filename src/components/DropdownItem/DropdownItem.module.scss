@@ -1,0 +1,22 @@
+@use '../../styles/mixins.scss';
+
+.dropdownItem {
+  height: 40px;
+  width: 100%;
+  padding: 0 16px;
+  color: var(--gray-700);
+  stroke: var(--gray-700);
+
+  @include mixins.flex(row, flex-start, center);
+  gap: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--primary-50);
+    color: var(--primary-700);
+
+    svg {
+      stroke: var(--primary-700);
+    }
+  }
+}

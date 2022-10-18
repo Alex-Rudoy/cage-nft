@@ -1,0 +1,33 @@
+@use '../../styles/mixins.scss';
+
+.dropdownCaller {
+  height: 40px;
+  padding: 0 10px;
+  @include mixins.flex(row, center, center);
+  gap: 12px;
+  background-color: var(--white);
+  color: var(--gray-700);
+  stroke: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  box-shadow: var(--shadow-xs);
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--gray-50);
+    color: var(--gray-800);
+    stroke: var(--gray-800);
+  }
+
+  &.placeholder {
+    color: var(--gray-500);
+  }
+
+  p {
+    flex: 1;
+  }
+
+  [class*='Svg'] {
+    pointer-events: none;
+  }
+}

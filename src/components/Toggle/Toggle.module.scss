@@ -1,0 +1,67 @@
+@use '../../styles/mixins.scss';
+
+.toggle {
+  user-select: none;
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    overflow: hidden;
+    @include mixins.flex(row);
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .rail {
+    min-width: 36px;
+    width: 36px;
+    min-height: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--gray-200);
+    margin-right: 13px;
+    padding: 2px;
+  }
+
+  .circle {
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+  }
+
+  &.checked .rail {
+    background: var(--primary-600);
+
+    .circle {
+      transform: translateX(16px);
+    }
+  }
+
+  &:hover {
+    .rail {
+      background: var(--gray-300);
+    }
+
+    &.checked .rail {
+      background: var(--primary-700);
+    }
+  }
+
+  &.disabled label {
+    cursor: not-allowed;
+
+    .rail {
+      background: var(--gray-100) !important;
+
+      .circle {
+        background: var(--gray-50);
+      }
+    }
+  }
+}

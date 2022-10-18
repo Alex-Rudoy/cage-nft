@@ -1,0 +1,27 @@
+@use '../DropdownCaller/DropdownCaller.module.scss';
+@use '../../styles/mixins.scss';
+
+.multiDropdownCaller {
+  @extend .dropdownCaller;
+  justify-content: space-between;
+  height: auto;
+  min-height: 40px;
+  padding: 5px;
+}
+.multiDropdownCallerInner {
+  width: 100%;
+  @include mixins.flex(row, unset, center, wrap);
+  gap: 10px;
+}
+.multiDropdownItem {
+  @include mixins.flex(row, unset, center);
+  gap: 5px;
+  border-radius: 4px;
+  background: var(--primary-100);
+  padding: 2px 5px;
+  color: var(--gray-900);
+  stroke: var(--error-500);
+}
+.multiDropdownItemRemove {
+  margin-top: 2px;
+}

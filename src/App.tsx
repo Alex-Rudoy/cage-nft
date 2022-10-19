@@ -16,7 +16,7 @@ const App: React.FC = () => {
       >
         <Routes location={location}>
           {routerData.map((route) => {
-            const { path, Component, children, ...rest } = route;
+            const { path, Component, children } = route;
 
             return (
               <Route key={path} path={path} element={<Component />}>

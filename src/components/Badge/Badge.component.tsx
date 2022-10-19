@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { SvgIcon } from '@components/SvgIcon';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { BadgeProps } from './Badge.types';
 
@@ -32,15 +31,7 @@ export const BadgeComponent: React.FC<BadgeProps> = ({
   return (
     <div className={badgeClass} id={id} onClick={onClick}>
       {icon && <SvgIcon src={icon} size={12} color="inherit" />}
-      {text && (
-        <Text
-          variant={TextVariantsEnum.Text_xs}
-          fontWeight={FontWeightEnum.Medium}
-          dots={dots}
-        >
-          {text}
-        </Text>
-      )}
+      {text && <p>{text}</p>}
     </div>
   );
 };

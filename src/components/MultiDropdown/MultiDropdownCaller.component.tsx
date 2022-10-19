@@ -1,9 +1,9 @@
-import classNames from 'classnames';
 import React from 'react';
+import classNames from 'classnames';
+
+import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 
 import { MultiDropdownCallerProps } from './MultiDropdown.types';
-import { IconsEnum, SvgIcon } from '@components/SvgIcon';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import styles from './MultiDropdown.module.scss';
 
@@ -13,8 +13,6 @@ export const MultiDropdownCaller = <T extends string | number>({
   options,
   className,
   style,
-  textVariant = TextVariantsEnum.Text_xs,
-  fontWeight = FontWeightEnum.Medium,
   placeholder,
   removeOption,
 }: MultiDropdownCallerProps<T>) => {
@@ -26,11 +24,7 @@ export const MultiDropdownCaller = <T extends string | number>({
           <div className={styles.multiDropdownItem} key={option.value}>
             {icon && <SvgIcon src={icon} size={16} color="inherit" />}
 
-            {!iconOnly && (
-              <Text variant={textVariant} fontWeight={fontWeight}>
-                {option.label}
-              </Text>
-            )}
+            {!iconOnly && <p>{option.label}</p>}
             <div
               className={`${styles.multiDropdownItemRemove} removeItem`}
               onClick={() => removeOption(option)}
@@ -40,15 +34,7 @@ export const MultiDropdownCaller = <T extends string | number>({
           </div>
         ))}
 
-        {!options.length && (
-          <Text
-            variant={textVariant}
-            fontWeight={fontWeight}
-            color={'gray-500'}
-          >
-            {placeholder}
-          </Text>
-        )}
+        {!options.length && <p>{placeholder}</p>}
       </div>
 
       <SvgIcon

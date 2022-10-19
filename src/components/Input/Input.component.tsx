@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import { Text, TextVariantsEnum } from '@components/Text';
-
 import { InputProps } from './Input.types';
 
 import styles from './Input.module.scss';
@@ -61,15 +59,7 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className={inputClass} style={style}>
-        {!!label && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            color="gray-700"
-            className={styles.inputLabel}
-          >
-            {label}
-          </Text>
-        )}
+        {!!label && <p className={styles.label}>{label}</p>}
         <div className={styles.inner}>
           {leftBlock && (
             <div
@@ -104,13 +94,7 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {!!errorMessage && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            color="error-500"
-            className={styles.errorMessage}
-          >
-            {errorMessage}
-          </Text>
+          <p className={styles.errorMessage}>{errorMessage}</p>
         )}
       </div>
     );

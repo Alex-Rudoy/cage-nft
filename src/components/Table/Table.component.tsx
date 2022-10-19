@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Skeleton } from '@components/Skeleton';
 import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 import { TablePagination } from '@components/TablePagination';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { TableComponentType } from './Table.types';
 
@@ -53,13 +52,7 @@ export const TableComponent: TableComponentType = ({
                     <Skeleton />
                   ) : (
                     <>
-                      <Text
-                        variant={TextVariantsEnum.Text_xs}
-                        fontWeight={FontWeightEnum.Medium}
-                        color="gray-500"
-                      >
-                        {column.name}
-                      </Text>
+                      <p>{column.name}</p>
                       {column.sortable && (
                         <SvgIcon
                           src={IconsEnum.arrow}

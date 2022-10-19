@@ -1,7 +1,7 @@
 html {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  color: var(--gray-900);
-  background: var(--gray-50);
+  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
+  color: var(--gray-95);
+  background: var(--gray-05);
   overflow-y: hidden;
 }
 
@@ -19,10 +19,6 @@ html {
 
 a {
   text-decoration: none;
-}
-
-.react-flow__attribution {
-  display: none;
 }
 
 div {

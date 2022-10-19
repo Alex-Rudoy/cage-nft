@@ -4,7 +4,7 @@
   --warning: #ff6b00;
   --error: #df4b41;
 
-  --white: #ffffff;
+  --gray-00: #ffffff;
   --gray-05: #f8f9fa;
   --gray-10: #f1f3f4;
   --gray-15: #ebedef;
@@ -19,4 +19,21 @@
   --gray-90: #464c51;
   --gray-95: #383d42;
   --gray-100: #292e33;
+}
+
+.darkTheme {
+  --gray-00: #202022;
+  --gray-05: #1b1c1d;
+  --gray-10: #282828;
+  --gray-15: #313131;
+  --gray-20: #323232;
+  --gray-30: #5c5d60;
+  // --gray-40: #5c5d60; // absent in design
+  --gray-50: #5c5c5c;
+  --gray-60: #5e5e5e; // marked as 6.5 in design
+  --gray-70: #929292;
+  --gray-80: #606060;
+  --gray-85: #555a60;
+  --gray-95: #c7c7c7;
+  // --gray-100: #c7c7c7; // absent in design
 }

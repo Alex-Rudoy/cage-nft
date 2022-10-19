@@ -28,7 +28,7 @@ export const InputPasswordComponent = React.forwardRef<
           <SvgIcon
             src={showPassword ? IconsEnum.hidePassowrd : IconsEnum.showPassword}
             size={20}
-            color="gray-400"
+            color="gray-40"
           />
         </div>
       }

@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
-
 import { RadioProps } from './Radio.types';
 
 import styles from './Radio.module.scss';
@@ -41,21 +39,8 @@ export const RadioComponent: React.FC<RadioProps> = ({
         </div>
         {text && (
           <div>
-            <Text
-              variant={TextVariantsEnum.Text_sm}
-              fontWeight={FontWeightEnum.Medium}
-            >
-              {text}
-            </Text>
-            {description && (
-              <Text
-                variant={TextVariantsEnum.Text_sm}
-                fontWeight={FontWeightEnum.Normal}
-                color="gray-500"
-              >
-                {description}
-              </Text>
-            )}
+            <p>{text}</p>
+            {description && <p>{description}</p>}
           </div>
         )}
       </label>

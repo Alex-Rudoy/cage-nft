@@ -1,5 +1,3 @@
-import { FontWeightEnum, TextVariantsEnum } from '@components/Text';
-
 import { simpleOption } from '@typings/dictionary';
 
 export type DropdownProps<T extends string | number> = {
@@ -9,8 +7,6 @@ export type DropdownProps<T extends string | number> = {
   iconOnly?: boolean;
   setValue: (value: T) => void;
   className?: string;
-  textVariant?: TextVariantsEnum;
-  fontWeight?: FontWeightEnum;
   placeholder?: string;
   containerClass?: string;
   width?: number;

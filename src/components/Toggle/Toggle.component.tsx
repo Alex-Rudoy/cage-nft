@@ -1,7 +1,5 @@
-import classNames from 'classnames';
 import React from 'react';
-
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
+import classNames from 'classnames';
 
 import { ToggleProps } from './Toggle.types';
 
@@ -39,14 +37,7 @@ export const ToggleComponent: React.FC<ToggleProps> = ({
         <div className={styles.rail}>
           <div className={styles.circle} />
         </div>
-        {text && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            fontWeight={FontWeightEnum.Medium}
-          >
-            {text}
-          </Text>
-        )}
+        {text && <p>{text}</p>}
       </label>
     </div>
   );

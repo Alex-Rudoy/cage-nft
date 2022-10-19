@@ -1,8 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import { useTranslation } from 'react-i18next';
-
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { TabBarProps } from './TabBar.types';
 
@@ -14,9 +11,7 @@ export const TabBarComponent: React.FC<TabBarProps> = ({
   selectedTab,
   options,
   onTabClick,
-  labelsTranslateNS,
 }) => {
-  const { t: translate } = useTranslation();
   const tabBarClass = classNames(styles.tabBar, className);
 
   return (
@@ -29,15 +24,7 @@ export const TabBarComponent: React.FC<TabBarProps> = ({
           })}
           onClick={() => onTabClick(option.value)}
         >
-          <Text
-            variant={TextVariantsEnum.Text_md}
-            fontWeight={FontWeightEnum.Medium}
-            color="inherit"
-          >
-            {labelsTranslateNS
-              ? translate(option.label, { ns: labelsTranslateNS })
-              : option.label}
-          </Text>
+          <p>{option.label}</p>
           <div className={styles.underline} />
         </div>
       ))}

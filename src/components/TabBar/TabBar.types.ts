@@ -6,5 +6,4 @@ export type TabBarProps = {
   selectedTab: string;
   options: simpleOptionWithStringValue[];
   onTabClick: (tab: string) => void;
-  labelsTranslateNS?: string;
 };

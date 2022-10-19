@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
 import { DropdownBase } from '@components/DropdownBase';
-import { MultiDropdownCaller } from './MultiDropdownCaller.component';
 import { DropdownItem } from '@components/DropdownItem';
+import { MultiDropdownCaller } from './MultiDropdownCaller.component';
+
+import { simpleOption } from '@typings/dictionary';
 
 import { MultiDropdownProps } from './MultiDropdown.types';
-import { simpleOption } from '@typings/dictionary';
 
 export const MultiDropdown = <T extends string | number>({
   className,
   containerClass,
-  fontWeight,
   iconOnly,
   options,
   setValue,
-  textVariant,
   placeholder = '',
   width = 320,
   value,
@@ -69,11 +68,9 @@ export const MultiDropdown = <T extends string | number>({
       caller={
         <MultiDropdownCaller
           className={containerClass}
-          fontWeight={fontWeight}
           options={addedOptions}
           iconOnly={iconOnly}
           removeOption={handleRemoveItem}
-          textVariant={textVariant}
           placeholder={placeholder}
           style={{ width: `${width}px` }}
         />

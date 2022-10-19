@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import { Text, TextVariantsEnum } from '@components/Text';
-
 import { TextAreaProps } from './TextArea.types';
 
 import styles from './TextArea.module.scss';
@@ -55,15 +53,7 @@ export const TextAreaComponent = React.forwardRef<
 
     return (
       <div className={textAreaClass} style={style}>
-        {!!label && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            color="gray-700"
-            className={styles.label}
-          >
-            {label}
-          </Text>
-        )}
+        {!!label && <p>{label}</p>}
         <div className={styles.inner}>
           <textarea
             placeholder={placeholder}
@@ -80,15 +70,7 @@ export const TextAreaComponent = React.forwardRef<
             {value}
           </textarea>
         </div>
-        {!!errorMessage && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            color="error-500"
-            className={styles.errorMessage}
-          >
-            {errorMessage}
-          </Text>
-        )}
+        {!!errorMessage && <p>{errorMessage}</p>}
       </div>
     );
   }

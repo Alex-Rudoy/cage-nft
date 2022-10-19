@@ -1,11 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { Button, ButtonVariantEnum } from '@components/Button';
 import { Dropdown } from '@components/Dropdown';
 import { IconsEnum } from '@components/SvgIcon';
-
-import generatePagination from '@utils/generatePagination';
+import generatePagination from './generatePagination';
 
 import { TablePaginationProps } from './TablePagination.types';
 
@@ -18,7 +16,6 @@ export const TablePaginationComponent: React.FC<TablePaginationProps> = ({
   onPaginationClick,
   itemsPerPageOptions = [5, 10, 20, 50],
 }) => {
-  const { t: translate } = useTranslation('common');
   const { pages, currentPage } = generatePagination(
     totalRecords,
     startRecord,
@@ -31,7 +28,7 @@ export const TablePaginationComponent: React.FC<TablePaginationProps> = ({
     <div className={styles.pagination}>
       <Button
         variant={ButtonVariantEnum.secondary}
-        text={translate('tables.previous')}
+        text={'Previous'}
         icon={IconsEnum.arrow}
         iconPosition="left"
         onClick={() =>
@@ -59,7 +56,7 @@ export const TablePaginationComponent: React.FC<TablePaginationProps> = ({
       ))}
       <Button
         variant={ButtonVariantEnum.secondary}
-        text={translate('tables.next')}
+        text={'Next'}
         icon={IconsEnum.arrow}
         iconPosition="right"
         onClick={() =>
@@ -71,7 +68,7 @@ export const TablePaginationComponent: React.FC<TablePaginationProps> = ({
       <Dropdown
         options={itemsPerPageOptions.map((value) => ({
           value,
-          label: `${value}/${translate('tables.page')}`,
+          label: `${value}/page`,
         }))}
         value={recordsPerPage}
         setValue={(value) => onPaginationClick(startRecord, value)}

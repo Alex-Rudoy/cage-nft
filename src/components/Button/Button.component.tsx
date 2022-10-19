@@ -2,17 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { SvgIcon, IconsEnum } from '@components/SvgIcon';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { ButtonProps } from './Button.types';
 
 import styles from './Button.module.scss';
-
-const textSizeMap = {
-  sm: TextVariantsEnum.Text_sm,
-  md: TextVariantsEnum.Text_sm,
-  lg: TextVariantsEnum.Text_md,
-};
 
 export const ButtonComponent: React.FC<ButtonProps> = ({
   text,
@@ -55,11 +48,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
         <SvgIcon src={IconsEnum.loader} size={30} />
       </div>
       {icon && <SvgIcon src={icon} size={20} />}
-      {text && (
-        <Text variant={textSizeMap[size]} fontWeight={FontWeightEnum.Medium}>
-          {text}
-        </Text>
-      )}
+      {text && <p>{text}</p>}
     </button>
   );
 };

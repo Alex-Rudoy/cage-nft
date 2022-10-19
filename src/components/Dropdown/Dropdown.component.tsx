@@ -1,11 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { DropdownBase } from '@components/DropdownBase';
 import { DropdownCaller } from '@components/DropdownCaller';
 import { DropdownItem } from '@components/DropdownItem';
 import { DropdownSearch } from '@components/DropdownSearch';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { DropdownProps } from './Dropdown.types';
 
@@ -14,13 +12,11 @@ import styles from './Dropdown.module.scss';
 export const DropdownComponent = <T extends string | number>({
   className,
   containerClass,
-  fontWeight,
   iconOnly,
   options,
   preFilteredOptions,
   showSearch,
   setValue,
-  textVariant,
   placeholder = '',
   value,
   width = 320,
@@ -28,7 +24,6 @@ export const DropdownComponent = <T extends string | number>({
 }: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
-  const { t: translate } = useTranslation('common');
 
   const handleSelect = (value) => {
     setIsOpen(false);
@@ -55,11 +50,9 @@ export const DropdownComponent = <T extends string | number>({
       caller={
         <DropdownCaller
           className={containerClass}
-          fontWeight={fontWeight}
           text={activeOption?.label}
           icon={activeOption?.icon}
           iconOnly={iconOnly}
-          textVariant={textVariant}
           placeholder={placeholder}
           style={{ width: `${width}px` }}
         />
@@ -79,12 +72,7 @@ export const DropdownComponent = <T extends string | number>({
 
       {filteredOptions.length === 0 && (
         <div className={styles.emptyState}>
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            fontWeight={FontWeightEnum.Medium}
-          >
-            {emptyStateText || translate('noValuesFound')}
-          </Text>
+          <p>{emptyStateText}</p>
         </div>
       )}
 

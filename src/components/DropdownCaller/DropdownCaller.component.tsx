@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { IconsEnum, SvgIcon } from '@components/SvgIcon';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { DropdownCallerProps } from './DropdownCaller.types';
 
@@ -14,8 +13,6 @@ export const DropdownCallerComponent: React.FC<DropdownCallerProps> = ({
   text,
   className,
   style,
-  textVariant = TextVariantsEnum.Text_xs,
-  fontWeight = FontWeightEnum.Medium,
   placeholder,
 }) => {
   const dropdownCallerClass = classNames(styles.dropdownCaller, className);
@@ -23,17 +20,9 @@ export const DropdownCallerComponent: React.FC<DropdownCallerProps> = ({
     <div className={dropdownCallerClass} style={style}>
       {icon && <SvgIcon src={icon} size={16} color="inherit" />}
 
-      {!iconOnly && text && (
-        <Text variant={textVariant} fontWeight={fontWeight}>
-          {text}
-        </Text>
-      )}
+      {!iconOnly && text && <p>{text}</p>}
 
-      {!text && (
-        <Text variant={textVariant} fontWeight={fontWeight} color={'gray-500'}>
-          {placeholder}
-        </Text>
-      )}
+      {!text && <p>{placeholder}</p>}
 
       <SvgIcon src={IconsEnum.arrowChevron} size={20} />
     </div>

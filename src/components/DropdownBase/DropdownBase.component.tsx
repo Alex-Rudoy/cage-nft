@@ -8,7 +8,6 @@ import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
 import { Portal } from '@components/Portal';
-import { Scrolling } from '@components/Scrolling';
 
 import { DropdownBaseProps } from './DropdownBase.types';
 
@@ -111,8 +110,7 @@ export const DropdownBaseComponent = React.forwardRef<
             onClick={backdropClick}
             ref={backdropRef}
           >
-            <Scrolling
-              vertical
+            <div
               className={dropdownClass}
               style={{
                 maxHeight: `${maxHeight}px`,
@@ -127,7 +125,7 @@ export const DropdownBaseComponent = React.forwardRef<
               }}
             >
               {children}
-            </Scrolling>
+            </div>
           </div>
         </Portal>
       </div>

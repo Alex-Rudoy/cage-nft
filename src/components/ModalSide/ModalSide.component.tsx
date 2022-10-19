@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { CSSTransition } from 'react-transition-group';
 
 import { Portal } from '@components/Portal';
-import { Scrolling } from '@components/Scrolling';
 import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 
 import { ModalSideProps } from './ModalSide.types';
@@ -48,7 +47,7 @@ export const ModalSideComponent: React.FC<ModalSideProps> = ({
     renderCustomCross(onClose)
   ) : (
     <div className={styles.cross} onClick={onClose}>
-      <SvgIcon src={IconsEnum.cross} color="gray-700" size={20} />
+      <SvgIcon src={IconsEnum.cross} color="gray-90" size={20} />
     </div>
   );
 
@@ -67,12 +66,9 @@ export const ModalSideComponent: React.FC<ModalSideProps> = ({
         >
           <div className={styles.container}>
             {cross}
-            <Scrolling
-              vertical
-              className={classNames(styles.side_modal, className)}
-            >
+            <div className={classNames(styles.side_modal, className)}>
               {children}
-            </Scrolling>
+            </div>
           </div>
         </div>
       </CSSTransition>

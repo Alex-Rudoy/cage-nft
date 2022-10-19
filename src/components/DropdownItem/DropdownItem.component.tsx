@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { SvgIcon } from '@components/SvgIcon';
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 
 import { DropdownItemProps } from './DropdownItem.types';
 
@@ -19,12 +18,7 @@ export const DropdownItemComponent: React.FC<DropdownItemProps> = ({
   return (
     <div className={dropdownItemClass} onClick={onClick}>
       {icon && <SvgIcon src={icon} size={16} />}
-      <Text
-        variant={TextVariantsEnum.Text_sm}
-        fontWeight={FontWeightEnum.Normal}
-      >
-        {text}
-      </Text>
+      <p>{text}</p>
     </div>
   );
 };

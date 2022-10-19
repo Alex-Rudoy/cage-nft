@@ -26,7 +26,7 @@ export const DropdownSearchComponent = React.forwardRef<
         type="text"
         leftBlock={
           <div className={styles.search}>
-            <SvgIcon src={IconsEnum.search} size={20} color="gray-500" />
+            <SvgIcon src={IconsEnum.search} size={20} color="gray-50" />
           </div>
         }
         onClick={(e) => e.stopPropagation()}

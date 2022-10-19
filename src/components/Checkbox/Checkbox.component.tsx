@@ -1,7 +1,6 @@
-import classNames from 'classnames';
 import React from 'react';
+import classNames from 'classnames';
 
-import { FontWeightEnum, Text, TextVariantsEnum } from '@components/Text';
 import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 
 import { CheckboxProps } from './Checkbox.types';
@@ -40,17 +39,10 @@ export const CheckboxComponent: React.FC<CheckboxProps> = ({
           <SvgIcon
             src={IconsEnum.checkboxV}
             size={12}
-            color={disabled ? 'gray-300' : 'primary-600'}
+            color={disabled ? 'gray-30' : 'primary'}
           />
         </div>
-        {text && (
-          <Text
-            variant={TextVariantsEnum.Text_sm}
-            fontWeight={FontWeightEnum.Medium}
-          >
-            {text}
-          </Text>
-        )}
+        {text && <p>{text}</p>}
       </label>
     </div>
   );

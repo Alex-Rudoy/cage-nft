@@ -62,12 +62,12 @@
     "jsx-a11y/no-static-element-interactions": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "@typescript-eslint/ban-ts-comment": 1,
-    "no-console": [
-      1,
-      {
-        "allow": ["warn", "error"]
-      }
-    ],
+//    "no-console": [
+//      1,
+//      {
+//        "allow": ["warn", "error"]
+//      }
+//    ],
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 0,
     "import/no-anonymous-default-export": 0

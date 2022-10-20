@@ -1,4 +1,7 @@
-import { useTypedSelector } from '@store/useTypedSelector';
+// import { useTypedSelector } from '@store/useTypedSelector';
+
+// export const useCustomersOverviewSelector = () =>
+//   useTypedSelector((state) => state.customersOverview);
 
 export const useCustomersOverviewSelector = () =>
-  useTypedSelector((state) => state.customersOverview);
+  ((state) => state.customersOverview);

@@ -1,7 +1,10 @@
-import {
-  AnonymousCustomerShortDataType,
-  CustomerShortDataType,
-} from '@store/customers/customers/customers.types';
+// import {
+//   AnonymousCustomerShortDataType,
+//   CustomerShortDataType,
+// } from '@store/customers/customers/customers.types';
+
+type AnonymousCustomerShortDataType = any;
+type CustomerShortDataType = any;
 
 export const fakeData: CustomerShortDataType[] = [
   {
@@ -33,7 +36,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -45,7 +48,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -57,7 +60,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -69,7 +72,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -81,7 +84,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -93,7 +96,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -105,7 +108,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,
@@ -117,7 +120,7 @@ export const fakeData: CustomerShortDataType[] = [
     phone_number: '+447700960033',
     avatar: '/images/avatarPlaceholder.jpg',
     last_seen: '2022-04-20T07:59:15Z',
-
+    
     tags: ['New', 'customer'],
     channels: ['sms', 'email'],
     revenue: 1000,

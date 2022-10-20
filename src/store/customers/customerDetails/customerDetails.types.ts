@@ -1,6 +1,6 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
-import { BackendResponse } from '@typings/backendResponse';
+// import { BackendResponse } from '@typings/backendResponse';
 
 import { CustomerShortDataType } from '../customers/customers.types';
 
@@ -56,17 +56,29 @@ export type CustomerExtendedDataType = CustomerShortDataType & {
   flows?: { name: string; status: string }[];
 };
 
+// export type FetchCustomerDetailsResponse =
+//   BackendResponse<CustomerExtendedDataType>;
+
+// export type FetchAttributeGroupDetailsResponse =
+//   BackendResponse<AttributeGroupDataType>;
+
+// export type FetchSegmentGroupDetailsResponse =
+//   BackendResponse<SegmentGroupDataType>;
+
+// export type FetchCampaignsGroupDetailsResponse =
+//   BackendResponse<CampaignsGroupDataType>;
+
 export type FetchCustomerDetailsResponse =
-  BackendResponse<CustomerExtendedDataType>;
+  any;
 
 export type FetchAttributeGroupDetailsResponse =
-  BackendResponse<AttributeGroupDataType>;
+  any;
 
 export type FetchSegmentGroupDetailsResponse =
-  BackendResponse<SegmentGroupDataType>;
+  any;
 
 export type FetchCampaignsGroupDetailsResponse =
-  BackendResponse<CampaignsGroupDataType>;
+  any;
 
 export type TFetchCustomerDetailsAction = PayloadAction<{ id: string }>;
 export type TFetchCustomerDetailsSuccessAction =

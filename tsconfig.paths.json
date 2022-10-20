@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@api/*": ["./api/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
       "@config/*": ["./config/*"],
@@ -11,7 +10,6 @@
       "@layout/*": ["./layout/*"],
       "@pages/*": ["./pages/*"],
       "@routing/*": ["./routing/*"],
-      "@services/*": ["./services/*"],
       "@store/*": ["./store/*"],
       "@styles/*": ["./styles/*"],
       "@tables/*": ["./tables/*"],

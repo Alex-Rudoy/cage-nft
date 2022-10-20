@@ -1,8 +1,10 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
-import { requestStatusEnum } from '@store/store.types';
+// import { requestStatusEnum } from '@store/store.types';
 
-import { BackendResponse } from '@typings/backendResponse';
+// import { BackendResponse } from '@typings/backendResponse';
+
+type requestStatusEnum = any;
 
 export type CustomersOverviewDataType = {
   total_pofiles: number;
@@ -18,8 +20,10 @@ export type CustomersOverviewReducerType = {
   data: CustomersOverviewDataType;
 };
 
-export type FetchCustomersOverviewResponse =
-  BackendResponse<CustomersOverviewDataType>;
+// export type FetchCustomersOverviewResponse =
+//   BackendResponse<CustomersOverviewDataType>;
+
+export type FetchCustomersOverviewResponse = any;
 
 export type TFetchCustomersOverviewSuccessAction =
   PayloadAction<CustomersOverviewDataType>;

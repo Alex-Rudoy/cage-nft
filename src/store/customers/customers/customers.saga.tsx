@@ -7,8 +7,8 @@ import {
   fetchCustomersSuccessAction,
 } from './customers.reducer';
 
-import { CustomersService } from '@api/CustomersService';
-import { errorHandleAction } from '@store/misc/notifications/notifications.reducer';
+// import { CustomersService } from '@api/CustomersService';
+// import { errorHandleAction } from '@store/misc/notifications/notifications.reducer';
 
 import {
   FetchAnonymousCustomersResponse,
@@ -18,41 +18,41 @@ import {
 } from './customers.types';
 
 function* fetchCustomersSaga({ payload }: TFetchCustomersAction) {
-  try {
-    const res: FetchCustomersResponse = yield call(
-      CustomersService.getCustomers,
-      {
-        searchValue: payload,
-        limit: 10000,
-        offset: 0,
-        // TODO: Monoj Karar Implement the limit and offset properly
-      }
-    );
-    yield put(fetchCustomersSuccessAction(res.data.data));
-  } catch (error) {
-    !+process.env.REACT_APP_HIDE_API_ERROR_NOTIFICATION &&
-      (yield put(errorHandleAction(error)));
-  }
+  // try {
+  //   const res: FetchCustomersResponse = yield call(
+  //     CustomersService.getCustomers,
+  //     {
+  //       searchValue: payload,
+  //       limit: 10000,
+  //       offset: 0,
+  //       // TODO: Monoj Karar Implement the limit and offset properly
+  //     }
+  //   );
+  //   yield put(fetchCustomersSuccessAction(res.data.data));
+  // } catch (error) {
+  //   !+process.env.REACT_APP_HIDE_API_ERROR_NOTIFICATION &&
+  //     (yield put(errorHandleAction(error)));
+  // }
 }
 
 function* fetchAnonymousCustomersSaga({
-  payload,
-}: TFetchAnonymousCustomersAction) {
-  try {
-    const res: FetchAnonymousCustomersResponse = yield call(
-      CustomersService.getAnonymousCustomers,
-      {
-        searchValue: payload,
-        limit: 10000,
-        offset: 0,
-        // TODO: Monoj Karar Implement the limit and offset properly
-      }
-    );
-    yield put(fetchAnonymousCustomersSuccessAction(res.data.data));
-  } catch (error) {
-    !+process.env.REACT_APP_HIDE_API_ERROR_NOTIFICATION &&
-      (yield put(errorHandleAction(error)));
-  }
+                                        payload,
+                                      }: TFetchAnonymousCustomersAction) {
+  // try {
+  //   const res: FetchAnonymousCustomersResponse = yield call(
+  //     CustomersService.getAnonymousCustomers,
+  //     {
+  //       searchValue: payload,
+  //       limit: 10000,
+  //       offset: 0,
+  //       // TODO: Monoj Karar Implement the limit and offset properly
+  //     }
+  //   );
+  //   yield put(fetchAnonymousCustomersSuccessAction(res.data.data));
+  // } catch (error) {
+  //   !+process.env.REACT_APP_HIDE_API_ERROR_NOTIFICATION &&
+  //     (yield put(errorHandleAction(error)));
+  // }
 }
 
 export function* customersWatcher() {

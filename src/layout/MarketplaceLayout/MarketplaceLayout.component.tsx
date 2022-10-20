@@ -7,7 +7,7 @@ import styles from './MarketplaceLayout.module.scss';
 export const MarketplaceLayoutComponent: React.FC<
   MarketplaceLayoutProps
 > = () => {
-  return <></>;
+  return <><div>f</div></>;
 };
 
 MarketplaceLayoutComponent.displayName = 'MarketplaceLayout';

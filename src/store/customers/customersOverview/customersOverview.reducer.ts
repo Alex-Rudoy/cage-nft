@@ -1,6 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { requestStatusEnum } from '@store/store.types';
+// import { requestStatusEnum } from '@store/store.types';
+
+enum requestStatusEnum  {
+  PROGRESS = 'PROGRESS',
+  SUCCESS = 'SUCCESS',
+}
 
 import {
   CustomersOverviewReducerType,

@@ -1,7 +1,10 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
-import { BackendResponse } from '@typings/backendResponse';
-import { isoDateString } from '@typings/isoDateString';
+// import { BackendResponse } from '@typings/backendResponse';
+// import { isoDateString } from '@typings/isoDateString';
+
+type BackendResponse = any;
+type isoDateString = any;
 
 export type CustomerShortDataType = {
   id: string;
@@ -30,10 +33,13 @@ export type CustomersReducerType = {
   customersFound: number;
 };
 
-export type FetchCustomersResponse = BackendResponse<CustomerShortDataType[]>;
-export type FetchAnonymousCustomersResponse = BackendResponse<
-  AnonymousCustomerShortDataType[]
->;
+// export type FetchCustomersResponse = BackendResponse<CustomerShortDataType[]>;
+// export type FetchAnonymousCustomersResponse = BackendResponse<
+//   AnonymousCustomerShortDataType[]
+// >;
+
+export type FetchCustomersResponse = any;
+export type FetchAnonymousCustomersResponse = any;
 
 export type GetCustomersProps = {
   searchValue?: string;
@@ -45,8 +51,8 @@ export type GetCustomersProps = {
 export type TFetchCustomersAction = PayloadAction<string>;
 export type TFetchCustomersSuccessAction = PayloadAction<
   CustomerShortDataType[]
->;
+  >;
 export type TFetchAnonymousCustomersAction = PayloadAction<string>;
 export type TFetchAnonymousCustomersSuccessAction = PayloadAction<
   AnonymousCustomerShortDataType[]
->;
+  >;

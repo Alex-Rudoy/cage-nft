@@ -20,8 +20,6 @@ import {
 } from './customerDetails.types';
 
 function* fetchCustomerDetailsSaga({ payload }: TFetchCustomerDetailsAction) {
-  
-  
   // const customerDetails: CustomerExtendedDataType = {
   //   channels: [],
   //   email: '',
@@ -34,15 +32,11 @@ function* fetchCustomerDetailsSaga({ payload }: TFetchCustomerDetailsAction) {
   //   attributes: {},
   //   segments: {},
   // };
-  
   // try {
   //   const attributes: FetchAttributeGroupDetailsResponse = yield call(
   //     CustomersService.getCustomerDetailsAttributes,
   //     payload
   //   );
-  
-  
-  
   //   customerDetails.attributes = { ...attributes.data.data };
   // } catch (error) {
   //   !+process.env.REACT_APP_HIDE_API_ERROR_NOTIFICATION &&

@@ -34,10 +34,12 @@
     width: 100%;
 
     &::placeholder {
-      color: var(--gray-400);
+      color: var(  --gray-60);
       opacity: 1;
+      font-style: normal;
+      font-weight: 400;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 17px;
     }
   }
 

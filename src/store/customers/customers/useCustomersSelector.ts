@@ -3,6 +3,4 @@
 // export const useCustomersSelector = () =>
 //   useTypedSelector((state) => state.customers);
 
-
-export const useCustomersSelector = () =>
-  ((state) => state.customers);
+export const useCustomersSelector = () => (state) => state.customers;

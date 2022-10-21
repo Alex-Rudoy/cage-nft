@@ -68,17 +68,13 @@ export type CustomerExtendedDataType = CustomerShortDataType & {
 // export type FetchCampaignsGroupDetailsResponse =
 //   BackendResponse<CampaignsGroupDataType>;
 
-export type FetchCustomerDetailsResponse =
-  any;
+export type FetchCustomerDetailsResponse = any;
 
-export type FetchAttributeGroupDetailsResponse =
-  any;
+export type FetchAttributeGroupDetailsResponse = any;
 
-export type FetchSegmentGroupDetailsResponse =
-  any;
+export type FetchSegmentGroupDetailsResponse = any;
 
-export type FetchCampaignsGroupDetailsResponse =
-  any;
+export type FetchCampaignsGroupDetailsResponse = any;
 
 export type TFetchCustomerDetailsAction = PayloadAction<{ id: string }>;
 export type TFetchCustomerDetailsSuccessAction =

@@ -36,8 +36,8 @@ function* fetchCustomersSaga({ payload }: TFetchCustomersAction) {
 }
 
 function* fetchAnonymousCustomersSaga({
-                                        payload,
-                                      }: TFetchAnonymousCustomersAction) {
+  payload,
+}: TFetchAnonymousCustomersAction) {
   // try {
   //   const res: FetchAnonymousCustomersResponse = yield call(
   //     CustomersService.getAnonymousCustomers,

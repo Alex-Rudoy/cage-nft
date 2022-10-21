@@ -12,7 +12,7 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
       label,
       type = 'text',
       autoComplete = 'off',
-      placeholder,
+      placeholder= 'Search by name of collection',
       className,
       style,
       errorMessage,

@@ -3,4 +3,5 @@ export type AvatarProps = {
   lastName?: string;
   src?: string;
   className?: string;
+  isOnline?: boolean;
 };

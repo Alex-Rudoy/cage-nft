@@ -51,8 +51,8 @@ export type GetCustomersProps = {
 export type TFetchCustomersAction = PayloadAction<string>;
 export type TFetchCustomersSuccessAction = PayloadAction<
   CustomerShortDataType[]
-  >;
+>;
 export type TFetchAnonymousCustomersAction = PayloadAction<string>;
 export type TFetchAnonymousCustomersSuccessAction = PayloadAction<
   AnonymousCustomerShortDataType[]
-  >;
+>;

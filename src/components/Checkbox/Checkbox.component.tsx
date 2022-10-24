@@ -39,7 +39,7 @@ export const CheckboxComponent: React.FC<CheckboxProps> = ({
           <SvgIcon
             src={IconsEnum.checkboxV}
             size={12}
-            color={disabled ? 'gray-30' : 'primary'}
+            color={disabled ? 'gray-30' : 'white'}
           />
         </div>
         {text && <p>{text}</p>}

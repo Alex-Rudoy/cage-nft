@@ -22,15 +22,15 @@
     @include mixins.flex(row, center, center);
     width: 16px;
     height: 16px;
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--gray-10);
     border-radius: 4px;
     background: var(--white);
     margin-right: 8px;
   }
 
   &.checked .checkbox_box {
-    border-color: var(--primary-600);
-    background: var(--primary-50);
+    border-color: var(--primary);
+    background: var(--primary);
 
     svg {
       opacity: 1;
@@ -39,14 +39,14 @@
 
   &:hover {
     .checkbox_box {
-      border-color: var(--primary-600);
-      background: var(--primary-50);
+      //border: 1px solid var(--gray-30);
+      //background: var(--primary-50);
     }
 
-    &.checked .checkbox_box {
-      border-color: var(--primary-700);
-      background: var(--primary-100);
-    }
+    //&.checked .checkbox_box {
+    //  border-color: var(--primary-700);
+    //  background: var(--primary-100);
+    //}
   }
 
   &.disabled label {

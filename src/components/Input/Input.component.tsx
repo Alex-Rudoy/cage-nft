@@ -1,3 +1,4 @@
+import {IconsEnum, SvgIcon} from '@components/SvgIcon'
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
@@ -15,11 +16,11 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
       placeholder= 'Search by name of collection',
       className,
       style,
-      errorMessage,
+      // errorMessage,
       value,
       disabled,
-      leftBlock,
-      rightBlock,
+      // leftBlock,
+      // rightBlock,
       onChange = () => null,
       onFocus = () => null,
       onBlur = () => null,
@@ -45,9 +46,12 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
     const inputClass = classNames(
       styles.input,
       {
+        // [styles[`button_variant_${variant}`]]: variant,
+        // [styles[`button_size_${size}`]]: size,
+        // [styles[`button_width_${width}`]]: width,
         [styles.input_focused]: isFocused,
-        [styles.input_error]: !!errorMessage,
-        [styles.input_disabled]: disabled,
+        // [styles.input_error]: !!errorMessage,
+        // [styles.input_disabled]: disabled,
       },
       className
     );
@@ -59,16 +63,16 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className={inputClass} style={style}>
-        {!!label && <p className={styles.label}>{label}</p>}
+        {!!label && <p className={styles.inputLabel}>{label}</p>}
         <div className={styles.inner}>
-          {leftBlock && (
+          {/*{leftBlock && (*/}
             <div
-              className={styles.leftBlock}
+              className={styles.loop}
               onClick={leftRightBlockClickHandler}
             >
-              {leftBlock}
+              <SvgIcon src={IconsEnum.loop} size={15} />
             </div>
-          )}
+          {/*)}*/}
           <input
             autoComplete={autoComplete}
             placeholder={placeholder}
@@ -84,18 +88,18 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             {...rest}
           />
-          {rightBlock && (
-            <div
-              className={styles.rightBlock}
+          {/*{rightBlock && (*/}
+            <button
+              className={styles.filter}
               onClick={leftRightBlockClickHandler}
             >
-              {rightBlock}
-            </div>
-          )}
+              <SvgIcon src={IconsEnum.filter} />
+            </button>
+           {/*)}*/}
         </div>
-        {!!errorMessage && (
-          <p className={styles.errorMessage}>{errorMessage}</p>
-        )}
+        {/*{!!errorMessage && (*/}
+        {/*  <p className={styles.errorMessage}>{errorMessage}</p>*/}
+        {/*)}*/}
       </div>
     );
   }

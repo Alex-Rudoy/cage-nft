@@ -1,3 +1,4 @@
+import {IconsEnum, SvgIcon} from '@components/SvgIcon'
 import React from 'react';
 import classNames from 'classnames';
 
@@ -32,11 +33,28 @@ export const ToggleComponent: React.FC<ToggleProps> = ({
         disabled={disabled}
         onChange={disabled ? () => null : () => onClick(id)}
       />
-
       <label htmlFor={id}>
         <div className={styles.rail}>
+          {checked ?
+            (<div className={styles.icoBlock}>
+                <SvgIcon src={IconsEnum.moon}/>
+                <SvgIcon src={IconsEnum.sun}  />
+            </div>
+              )
+            :
+            (<div className={styles.icoBlock}>
+                <SvgIcon src={IconsEnum.moon} />
+                <SvgIcon src={IconsEnum.sun} color={'primary'} />
+              </div>
+            )
+          }
           <div className={styles.circle} />
         </div>
+        {/*<div className={styles.rail}>*/}
+        {/*  <SvgIcon src={IconsEnum.moon}  />*/}
+        {/*  <SvgIcon src={IconsEnum.sun} />*/}
+        {/*  <div className={styles.toggler} />*/}
+        {/*</div>*/}
         {text && <p>{text}</p>}
       </label>
     </div>

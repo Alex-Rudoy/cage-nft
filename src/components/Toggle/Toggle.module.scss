@@ -17,40 +17,53 @@
   }
 
   .rail {
-    min-width: 36px;
-    width: 36px;
-    min-height: 20px;
-    height: 20px;
-    border-radius: 999px;
-    background: var(--gray-200);
+    min-width: 86px;
+    width: 86px;
+    min-height: 44px;
+    height: 44px;
+    border-radius: 10px;
+   
+    background: var(--gray-00);
     margin-right: 13px;
     padding: 2px;
+    position: relative;
   }
 
   .circle {
-    width: 16px;
-    height: 16px;
-    background: var(--white);
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: var(--border-radius-10);
     box-shadow: var(--shadow-sm);
   }
 
   &.checked .rail {
-    background: var(--primary-600);
-
+    background: var(--white);
     .circle {
-      transform: translateX(16px);
+      transform: translateX(40px);
+      background: var(--primary-5);
     }
   }
 
+  .icoBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    z-index: 99;
+  }
+  
   &:hover {
-    .rail {
-      background: var(--gray-300);
-    }
+    //.rail {
+    //  background: var(--white);
+    //}
 
-    &.checked .rail {
-      background: var(--primary-700);
-    }
+    //&.checked .rail {
+    //  background: var(--white);
+    //}
   }
 
   &.disabled label {

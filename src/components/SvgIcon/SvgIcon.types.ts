@@ -6,10 +6,11 @@ export enum IconsEnum {
   guide = '/icons/account/guide.svg',
   email = '/icons/account/email.svg',
   sms = '/icons/account/sms.svg',
-
+  
   // common
   moda = '/icons/common/moda.svg',
   loader = '/icons/common/loader.svg',
+  loop = '/icons/common/loop.svg',
   search = '/icons/common/search.svg',
   showPassword = '/icons/common/show-password.svg',
   hidePassowrd = '/icons/common/hide-password.svg',
@@ -67,6 +68,10 @@ export enum IconsEnum {
   phone = '/icons/common/phone.svg',
   userPlus = '/icons/common/user-plus.svg',
 
+  //theme
+  moon = '/icons/theme/moon.svg',
+  sun = '/icons/theme/sun.svg',
+  sunwhite = '/icons/theme/sunwhite.svg',
   // campaigns
   draft = '/icons/campaigns/draft.svg',
   scheduled = '/icons/campaigns/Scheduled.svg',

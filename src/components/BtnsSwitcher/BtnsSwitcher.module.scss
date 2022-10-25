@@ -1,0 +1,30 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  background: var(--gray-10);
+  width: max-content;
+  display: flex;
+  gap: 1px;
+  padding: 4px;
+  border-radius: var(--border-radius-10);
+}
+
+.switch_btn {
+  min-width: 93px;
+  padding: 11px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: inherit;
+  @include mixins.font(14px,17px,500);
+  &_sm {
+    min-width: 92px;
+    padding: 7px 0;
+  }
+  &_active {
+    background: var(--white);
+    box-shadow: var(--shadow-switch-btn);
+    border-radius: var(--border-radius-10);
+  }
+}
+

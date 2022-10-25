@@ -1,4 +1,4 @@
-export type ToggleProps = {
+export type ThemeToggleProps = {
   checked: boolean;
   disabled?: boolean;
   id?: string;

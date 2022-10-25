@@ -2,11 +2,11 @@ import {IconsEnum, SvgIcon} from '@components/SvgIcon'
 import React from 'react';
 import classNames from 'classnames';
 
-import { ToggleProps } from './Toggle.types';
+import { ThemeToggleProps } from './ThemeToggle.types';
 
-import styles from './Toggle.module.scss';
+import styles from './ThemeToggle.module.scss';
 
-export const ToggleComponent: React.FC<ToggleProps> = ({
+export const ThemeToggleComponent: React.FC<ThemeToggleProps> = ({
   className,
   onClick,
   checked,
@@ -53,7 +53,7 @@ export const ToggleComponent: React.FC<ToggleProps> = ({
         {/*<div className={styles.rail}>*/}
         {/*  <SvgIcon src={IconsEnum.moon}  />*/}
         {/*  <SvgIcon src={IconsEnum.sun} />*/}
-        {/*  <div className={styles.toggler} />*/}
+        {/*  <div className={styles.ThemeToggler} />*/}
         {/*</div>*/}
         {text && <p>{text}</p>}
       </label>
@@ -61,4 +61,4 @@ export const ToggleComponent: React.FC<ToggleProps> = ({
   );
 };
 
-ToggleComponent.displayName = 'Toggle';
+ThemeToggleComponent.displayName = 'ThemeToggle';

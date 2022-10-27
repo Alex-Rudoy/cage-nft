@@ -12,22 +12,35 @@ export const AvatarComponent: React.FC<AvatarProps> = ({
                                                          className,
                                                          isOnline= true
                                                        }) => {
-  const onlineFlagCircle = classNames(styles.onlineFlagCircle,
+  const onlineFlagCircle = classNames(styles.onlineBadge,
     {
-      [styles[`onlineFlagCircle__offline`]] : !isOnline
+      [styles[`onlineBadge__offline`]] : !isOnline
     });
   return (
       <div className={styles.avatar}>
+        {/*{src ? (*/}
+        {/*  <img src="{src}" alt="" />*/}
+        {/*) : (*/}
+        {/*  <p>*/}
+        {/*    {name && (name[0] + (lastName ? lastName[0] : name[1])).toUpperCase()}*/}
+        {/*  </p>*/}
+        {/*)}*/}
         {src ? (
-          <img src="{src}" alt="" />
+          <>
+            <img src={src} alt="userAvatar" />
+            <div className={styles.msgBadge}>3</div>
+          </>
         ) : (
-          <p>
-            {name && (name[0] + (lastName ? lastName[0] : name[1])).toUpperCase()}
-          </p>
+          <>
+            <div className={styles.mediumCircle}></div>
+            <div className={styles.onlineBadge}></div>
+            <div className={styles.upCircle}></div>
+          </>
         )}
-        <div className={styles.mediumCircle}></div>
-        <div className={onlineFlagCircle}></div>
-        <div className={styles.upCircle}></div>
+        {/*{src && <img src="{src}" alt="userAvatar" />}*/}
+        {/*<div className={styles.mediumCircle}></div>*/}
+        {/*<div className={onlineFlagCircle}></div>*/}
+        {/*<div className={styles.upCircle}></div>*/}
       </div>
   );
 };

@@ -1,0 +1,60 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  .content{
+    height: 0;
+    overflow: hidden;
+    background: var(--white);
+    &_sub {
+      padding-left: 40px;
+    }
+  }
+  &_active {
+    .content {
+      height: auto;
+    }
+  }
+}
+
+.sidebarItem {
+  background-color: var(--white);
+  //&:hover {
+  //  background-color: var(--gray-05);
+  //}
+}
+
+.icon {
+  path {
+    fill: var(--gray-60);
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 17px 0 11px;
+  cursor: pointer;
+  &_active {
+    background-color: var(--gray-10);
+    border-radius: 7px;
+    min-width: 40px;
+    padding-left: 11px;
+    .icon {
+      path {
+        fill: #1A85FF;
+      }
+    }
+  }
+  .titleContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.hide {
+  display: none;
+}
+

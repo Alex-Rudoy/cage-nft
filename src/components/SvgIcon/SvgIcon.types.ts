@@ -91,8 +91,21 @@ export enum IconsEnum {
   integrate = '/icons/menu/integrate.svg',
   manage = '/icons/menu/manage.svg',
   settings = '/icons/menu/settings.svg',
+  arrdown = '/icons/menu/arr-down.svg',
   support = '/icons/common/help.svg',
-
+  logo = '/icons/menu/logo.svg',
+  logosm = '/icons/menu/logo-sm.svg',
+  marketplace = '/icons/menu/market.svg',
+  fract = '/icons/menu/fract.svg',
+  launchpad = '/icons/menu/launchpad.svg',
+  connect = '/icons/menu/connect.svg',
+  supp = '/icons/menu/supp.svg',
+  about= '/icons/menu/about.svg',
+  twitter = '/icons/menu/twitter.svg',
+  telegram = '/icons/menu/telegram.svg',
+  discord = '/icons/menu/discord.svg',
+  youtube = '/icons/menu/youtube.svg',
+  // ava = '/icons/menu/ava.svg',
   gettingStarted = '/icons/menu/getting-started.svg',
   videoTutorials = '/icons/menu/video-tutorials.svg',
   reportBug = '/icons/menu/report-bug.svg',
@@ -158,12 +171,12 @@ export enum IconsEnum {
   exitSegment = '/icons/flows/exit-segment.svg',
 
   // Networks
-  twitter = '/icons/networks/twitter.svg',
+  // twitter = '/icons/networks/twitter.svg',
   facebook = '/icons/networks/facebook.svg',
   instagram = '/icons/networks/instagram.svg',
   linkedin = '/icons/networks/linkedin.svg',
   tiktok = '/icons/networks/tiktok.svg',
-  youtube = '/icons/networks/youtube.svg',
+  // youtube = '/icons/networks/youtube.svg',
   twitterOutline = '/icons/networks/twitter_outline.svg',
   facebookOutline = '/icons/networks/facebook_outline.svg',
   instagramOutline = '/icons/networks/instagram_outline.svg',
@@ -176,6 +189,7 @@ export type SvgIconProps = {
   src: IconsEnum | string; // use string for icons from backend
   onClick?: () => void;
   size?: number;
+  height?: number;
   color?: colorType;
   rotate?: '0' | '90' | '180' | '270';
   className?: string;

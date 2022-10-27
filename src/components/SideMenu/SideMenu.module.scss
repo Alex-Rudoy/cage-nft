@@ -1,0 +1,44 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  background: var(--white);
+  position: absolute;
+  width: 280px;
+  height: 900px;
+  padding: 0 21px 13px;
+  @include mixins.flex(column,start);
+
+  &_hide {
+    width: 70px;
+  }
+  header {
+    height: 100px;
+  }
+
+}
+
+.mailContent {
+  @include mixins.flex(flex,flex-start,center);
+  gap: 15px;
+  .user {
+    .name{
+      @include mixins.font(16px,19.5px, 500);
+      color: var(--gray-95);
+      white-space: nowrap;
+    }
+    .mail{
+      @include mixins.font(14px,16.7px, 500);
+      color: var(--gray-85);
+    }
+    &_hide {
+      display: none;
+    }
+  }
+}
+
+
+nav {
+  color: var(--gray-95);
+  @include mixins.font(14px,16.7px);
+  flex-grow: 1;
+}

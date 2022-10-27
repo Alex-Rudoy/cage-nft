@@ -29,4 +29,4 @@ export const BtnsSwitcherComponent: React.FC<BtnsSwitcherProps> = ({
   );
 };
 
-BtnsSwitcherComponent.displayName = 'Badge';
+BtnsSwitcherComponent.displayName = 'BtnsSwitcher';

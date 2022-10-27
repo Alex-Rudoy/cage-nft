@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Marketplace",
+    "icon": "marketplace",
+    "children": [
+      {
+        "path": "/hot",
+        "title": "Hot"
+      },
+      {
+        "path": "/upcoming",
+        "title": "Upcoming"
+      },
+      {
+        "path": "/categories",
+        "title": "Categories"
+      },
+      {
+        "path": "/stats",
+        "title": "Stats"
+      }
+    ]
+  },
+  {
+    "title": "Fractional",
+    "icon": "fract",
+    "children": [  {
+      "path": "/hot",
+      "title": "Hot"
+    },
+      {
+        "path": "/upcoming",
+        "title": "Upcoming"
+      }
+    ]
+  },
+  {
+    "title": "Launchpad",
+    "icon": "marketplace",
+    "children": []
+  },
+  {
+    "title": "Connect",
+    "icon": "connect",
+    "children": []
+  },
+  {
+    "title": "Support",
+    "icon": "supp",
+    "children": []
+  },
+  {
+    "title": "About us",
+    "icon": "about",
+    "children": []
+  }
+]

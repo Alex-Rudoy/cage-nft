@@ -9,6 +9,7 @@ import styles from './SvgIcon.module.scss';
 export const SvgIconComponent: React.FC<SvgIconProps> = ({
   src,
   size = 24,
+  height = size,
   color = 'inherit',
   rotate,
   className,
@@ -34,7 +35,7 @@ export const SvgIconComponent: React.FC<SvgIconProps> = ({
       };
   const customStyles = {
     width: `${size}px`,
-    height: `${size}px`,
+    height: `${height}px`,
     ...style,
     ...stroke,
   };

@@ -11,20 +11,21 @@ export const SideMenuItemComponent: React.FC<any> = ({
                                                              item,open
                                                            }) => {
   const [active, setActive] = useState(false)
-  console.log(item.icon)
+  console.log("open",open)
   
   return (
   <>
     {
       item.children ? (
-        <div className={cn(styles.wrap,{[styles.wrap_active]: active})} onClick={ () => setActive(!active)}>
+        <div className={cn(styles.wrap,{[styles.wrap_active]: active && !open})} onClick={ () => setActive(!active)}>
           <div className={styles.sidebarItem}>
-            <div className={cn(styles.title,{[styles.title_active]: active && !open})}>
+            <div className={cn(styles.title,{[styles.title_active]: active})}>
               <div className={styles.titleContent}>
-                {item.icon && <SvgIcon className={styles.icon} src={IconsEnum[item.icon]}/>}
-                <span className={`${open ? styles.hide : ''}`}>{item.title}</span>
+                {item.icon && <SvgIcon className={styles.icon} src={IconsEnum[item.icon]} size={24}/>}
+                <span className={cn(styles.text,{[styles.text_show]: open})}>{item.title}</span>
+                {/*<span className={`${open ? styles.hide : ''}`}>{item.title}</span>*/}
               </div>
-              <SvgIcon className={`${open ? styles.hide : ''}`} src={IconsEnum.arrdown} size={11}/>
+              <SvgIcon className={cn(styles.arrow,{[styles.arrow_show]: open})} src={IconsEnum.arrdown} size={11}/>
             </div>
             <div className={cn(styles.content,styles.content_sub)}>
               {item.children.map((child,i) => <SideMenuItemComponent key={i} item={child} />)}
@@ -37,7 +38,8 @@ export const SideMenuItemComponent: React.FC<any> = ({
           <div className={styles.sidebarItem}>
               <div className={styles.title}>
               <div className={styles.titleContent}>
-                <span>{item.title}</span>
+                {item.icon && <SvgIcon className={styles.icon} src={IconsEnum[item.icon]} size={24}/>}
+                <span className={cn(styles.text,{[styles.text_show]: open})}>{item.title}</span>
               </div>
             </div>
           </div>

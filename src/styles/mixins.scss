@@ -23,7 +23,7 @@
   }
 }
 
-@mixin atMobile() {
+@mixin atTablet() {
   @media (max-width: 992px) {
     @content;
   }

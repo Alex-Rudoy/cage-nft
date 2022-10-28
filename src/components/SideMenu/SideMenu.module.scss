@@ -5,20 +5,36 @@
   position: absolute;
   width: 280px;
   height: 900px;
-  padding: 0 21px 13px;
+  padding: 41px 21px 0 13px;
   @include mixins.flex(column,start);
-
-  &_hide {
-    width: 70px;
+  @include mixins.atTablet() {
+    &_hide {
+      padding: 41px 11px 0 11px;
+      width: 70px;
+    }
   }
-  header {
-    height: 100px;
+  
+  .header {
+    marin: 0 auto;
+    padding: 27px 0 38px 0;
+    background: url('../../../public/icons/menu/logo.svg') no-repeat center;
+    @include mixins.atTablet() {
+      &_hide {
+        background: url('../../../public/icons/menu/logosm.svg') no-repeat center;
+      }
+      padding: 24px 13px 27px 13px;
+    }
+   
   }
 
 }
 
 .mailContent {
   @include mixins.flex(flex,flex-start,center);
+  padding-bottom: 22px;
+  @include mixins.atTablet() {
+    padding-bottom: 25px;
+  }
   gap: 15px;
   .user {
     .name{
@@ -30,15 +46,81 @@
       @include mixins.font(14px,16.7px, 500);
       color: var(--gray-85);
     }
-    &_hide {
-      display: none;
+  }
+}
+
+.contentContainer{
+  //flex-grow: 1;
+  min-height: calc(100vh - 214px);
+  
+  @include mixins.atTablet() {
+    min-height: calc(100vh - 214px);
+    &_hide{
+      min-height: 476px;
     }
   }
 }
 
-
 nav {
   color: var(--gray-95);
   @include mixins.font(14px,16.7px);
-  flex-grow: 1;
+  @include mixins.atTablet() {
+    height: 310px;
+    padding-bottom: 23px;
+  }
 }
+
+footer {
+  height: 52px;
+  color: var(--gray-70);
+  
+  .social {
+    display: grid;
+    grid-template-columns: 112px auto;
+    grid-auto-rows: 20px;
+    gap: 18px 0;
+    padding: 18px 0;
+    height: 94px;
+    border-top: 1px solid var(--gray-15);
+    border-bottom: 1px solid var(--gray-15);
+    @include mixins.atTablet() {
+      &_hidden {
+        grid-template-columns: unset;
+        justify-content: center;
+        align-content: end;
+        gap: 28px 0;
+        height: 379px;
+        border-bottom: none;
+      }
+    }
+   
+    .ico {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+     
+    }
+  }
+  .rights {
+    text-align: center;
+    padding-top: 18px;
+    white-space: nowrap;
+    @include mixins.font(12px,14px, 400);
+    color: var(--gray-80);
+    @include mixins.atTablet() {
+      height: 45px;
+      border-top:none;
+      span {
+        display:none;
+      }
+    }
+  }
+}
+
+@include mixins.atTablet() {
+  .hide {
+    display: none;
+  }
+}
+

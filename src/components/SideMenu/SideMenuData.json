@@ -46,12 +46,10 @@
   },
   {
     "title": "Support",
-    "icon": "supp",
-    "children": []
+    "icon": "sp"
   },
   {
     "title": "About us",
-    "icon": "about",
-    "children": []
+    "icon": "about"
   }
 ]

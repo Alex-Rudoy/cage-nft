@@ -1,6 +1,11 @@
+export interface ButtonConfigItem {
+  id: number;
+  title: string;
+}
+
 export interface BtnsSwitcherProps {
-  handleBtnClk: (id: string) => void;
-  buttonsList: {id: string; text: string}[];
-  active: string;
-  size?: "sm" | "md"
+  buttonConfigList: ButtonConfigItem[];
+  currentButtonId: number | null;
+  setCurrentButtonId: (id: number) => void;
+  size?: 'exsm' | 'sm' | 'md';
 }

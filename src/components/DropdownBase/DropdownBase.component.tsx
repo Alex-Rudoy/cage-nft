@@ -1,3 +1,6 @@
+import { InputComponent } from '@components/Input/Input.component';
+import { IconsEnum, SvgIcon } from '@components/SvgIcon';
+import { getUUID } from '@utils/getUUID';
 import React, {
   useState,
   useRef,
@@ -21,7 +24,7 @@ export const DropdownBaseComponent = React.forwardRef<
     {
       caller,
       disabled,
-      maxHeight = 200,
+      maxHeight = 625,
       children,
       customState,
       placement = 'bottom',
@@ -34,6 +37,7 @@ export const DropdownBaseComponent = React.forwardRef<
     },
     ref
   ) => {
+    const [value, setValue] = useState('');
     const [defaultIsOpen, setDefaultIsOpen] = useState(false);
     const [isOpen, setIsOpen] = customState || [
       defaultIsOpen,
@@ -44,7 +48,7 @@ export const DropdownBaseComponent = React.forwardRef<
     const backdropRef = useRef(null);
 
     const { styles: popperStyles, update } = usePopper(callerRef, dropdownRef, {
-      placement,
+      placement: 'bottom-end',
       modifiers: [
         {
           name: 'offset',
@@ -95,12 +99,25 @@ export const DropdownBaseComponent = React.forwardRef<
 
     return (
       <div className={styles.container}>
-        <div
-          className={styles.caller}
-          onClick={handleClick}
-          ref={(ref) => setCallerRef(ref)}
-        >
-          {caller}
+        <div className={styles.input}>
+          <InputComponent
+            value={value}
+            id={getUUID()}
+            leftBlock={
+              <div>
+                <SvgIcon src={IconsEnum.loop} size={15} />
+              </div>
+            }
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <div
+            className={styles.caller}
+            onClick={handleClick}
+            ref={(ref) => setCallerRef(ref)}
+          >
+            <SvgIcon src={IconsEnum.filter} />
+            {/*{caller}*/}
+          </div>
         </div>
         <Portal>
           <div
@@ -120,7 +137,7 @@ export const DropdownBaseComponent = React.forwardRef<
               ref={(ref) => setDropdownRef(ref)}
               onClick={() => {
                 if (!dontCloseOnInnerClick && isOpen) {
-                  toggleDropdown();
+                  // toggleDropdown();
                 }
               }}
             >

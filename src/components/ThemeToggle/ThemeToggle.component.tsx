@@ -1,4 +1,4 @@
-import {IconsEnum, SvgIcon} from '@components/SvgIcon'
+import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -35,19 +35,17 @@ export const ThemeToggleComponent: React.FC<ThemeToggleProps> = ({
       />
       <label htmlFor={id}>
         <div className={styles.rail}>
-          {checked ?
-            (<div className={styles.icoBlock}>
-                <SvgIcon src={IconsEnum.moon}/>
-                <SvgIcon src={IconsEnum.sun}  />
+          {checked ? (
+            <div className={styles.icoBlock}>
+              <SvgIcon src={IconsEnum.moon} />
+              <SvgIcon src={IconsEnum.sun} />
             </div>
-              )
-            :
-            (<div className={styles.icoBlock}>
-                <SvgIcon src={IconsEnum.moon} />
-                <SvgIcon src={IconsEnum.sun} color={'primary'} />
-              </div>
-            )
-          }
+          ) : (
+            <div className={styles.icoBlock}>
+              <SvgIcon src={IconsEnum.moon} />
+              <SvgIcon src={IconsEnum.sun} color={'primary'} />
+            </div>
+          )}
           <div className={styles.circle} />
         </div>
         {/*<div className={styles.rail}>*/}

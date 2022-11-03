@@ -1,0 +1,10 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+

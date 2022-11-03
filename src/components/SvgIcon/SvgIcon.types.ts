@@ -6,7 +6,16 @@ export enum IconsEnum {
   guide = '/icons/account/guide.svg',
   email = '/icons/account/email.svg',
   sms = '/icons/account/sms.svg',
-  
+
+  //CARD
+  heartt = '/icons/card/heart.svg',
+  eyess = '/icons/card/eyess.svg',
+  bubble = '/icons/card/bubble.svg',
+  right = '/icons/card/right.svg',
+  //head
+  heart = '/icons/header/heart.svg',
+  bell = '/icons/header/bell.svg',
+  arrowupdown = '/icons/header/arrowupdown.svg',
   // common
   moda = '/icons/common/moda.svg',
   loader = '/icons/common/loader.svg',
@@ -44,7 +53,7 @@ export enum IconsEnum {
   pie = '/icons/common/pie.svg',
   clock = '/icons/common/clock.svg',
   envelope = '/icons/common/envelope.svg',
-  bell = '/icons/common/bell.svg',
+  // bell = '/icons/common/bell.svg',
   data = '/icons/common/data.svg',
   alert = '/icons/common/alert.svg',
   mobile = '/icons/common/mobile.svg',
@@ -103,7 +112,7 @@ export enum IconsEnum {
   launchpad = '/icons/menu/launchpad.svg',
   connect = '/icons/menu/connect.svg',
   supp = '/icons/menu/supp.svg',
-  about= '/icons/menu/about.svg',
+  about = '/icons/menu/about.svg',
   Twitter = '/icons/menu/twitter.svg',
   Telegram = '/icons/menu/telegram.svg',
   Discord = '/icons/menu/discord.svg',

@@ -1,16 +1,14 @@
 @use '../../styles/mixins.scss';
 
 .dropdownCaller {
-  height: 40px;
+  height: 44px;
   padding: 0 10px;
   @include mixins.flex(row, center, center);
   gap: 12px;
   background-color: var(--white);
   color: var(--gray-700);
   stroke: var(--gray-700);
-  border: 1px solid var(--gray-300);
   box-shadow: var(--shadow-xs);
-  border-radius: 8px;
   cursor: pointer;
 
   &:hover {

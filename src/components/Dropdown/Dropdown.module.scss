@@ -2,8 +2,37 @@
 
 .emptyState {
   @include mixins.flex(row, center, center);
-  stroke: var(--gray-900);
-  color: var(--gray-700);
   padding: 0 16px;
   height: 40px;
+}
+
+.title {
+  @include mixins.font(16px,42.5px,500);
+  margin: 13px 0 10px 0;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 13px;
+  >div {
+    width: 15px;
+    height: 2px;
+    background-color: var(--gray-30)
+  }
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-bottom: 16px;
+}
+
+.btnsBlock {
+  display: flex;
+  gap: 7px;
+  padding-top: 6px;
+  margin-bottom: 24px;
 }

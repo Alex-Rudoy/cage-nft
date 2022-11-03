@@ -1,0 +1,77 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  max-width: 259px;
+  min-height: 369px;
+  border-radius: var(--border-radius-10);
+  overflow: hidden;
+  .image {
+    position: relative;
+  }
+  .ethLabel {
+    @include mixins.font(16px,19.5px,500);
+    background: var(--white);
+    color: var(--primary);
+    width: 90px;
+    height: 33px;
+    border: 1px solid var( --gray-15);
+    border-radius: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 11px;
+    right: 13px;
+  }
+  .cardContent {
+    position: relative;
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 100%;
+      border: 4px solid white;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+    }
+    .badgeWrap {
+      background: white;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+    .badge {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 7px;
+      top: 26px;
+    }
+    }
+    .textContent {
+      padding: 15px 0 14px 70px;
+      .subtitle {
+        @include mixins.font(12px,14.3px);
+        margin-bottom:  3px;
+      }
+    }
+    .divider {
+      height: 1px;
+      background: var(--gray-10);
+      min-width: 259px;
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 9px 0 19px 20px;
+      @include mixins.font(12px,14.3px);
+      span {
+        padding:0 16px 0 2px;
+      }
+    }
+  }
+}

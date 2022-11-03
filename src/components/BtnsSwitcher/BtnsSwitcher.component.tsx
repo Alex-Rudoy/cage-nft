@@ -6,25 +6,25 @@ import { BtnsSwitcherProps } from './BtnsSwitcher.types';
 import styles from './BtnsSwitcher.module.scss';
 
 export const BtnsSwitcherComponent: React.FC<BtnsSwitcherProps> = ({
-                                                                     buttonsList,
-                                                                     handleBtnClk,
-                                                                     active,
-                                                                     size
-                                                     }) => {
-  
+  buttonConfigList,
+  currentButtonId,
+  setCurrentButtonId,
+  size,
+}) => {
   return (
-    <div className={styles.wrap} >
-      {buttonsList.map((el )=>
+    <div className={styles.wrap}>
+      {buttonConfigList.map((el) => (
         <button
-          className={classNames(styles.switch_btn,
-            {
-              [styles.switch_btn_active]: active === el.id,
-              [styles[`switch_btn_${size}`]]: size,
-            }
-          )}
+          className={classNames(styles.switch_btn, {
+            [styles.switch_btn_active]: currentButtonId === el.id,
+            [styles[`switch_btn_${size}`]]: size,
+          })}
           key={el.id}
-          onClick = {()=>handleBtnClk(el.id)}>{el.text}
-        </button>)}
+          onClick={() => setCurrentButtonId(el.id)}
+        >
+          {el.title}
+        </button>
+      ))}
     </div>
   );
 };

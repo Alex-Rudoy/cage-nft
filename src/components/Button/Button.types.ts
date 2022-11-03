@@ -3,14 +3,16 @@ import { IconsEnum } from '@components/SvgIcon';
 export enum ButtonVariantEnum {
   primary = 'primary',
   secondary = 'secondary',
-  red = 'red',
+  secondaryFilt = 'secondaryFilt',
+  bell = 'bell',
+  light = 'light',
 }
 
 export type ButtonProps = {
-  text: string;
+  text?: string;
   id?: string;
   variant?: ButtonVariantEnum;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg';
   width?: 'full' | 'content';
   icon?: IconsEnum;
   iconPosition?: 'left' | 'right';

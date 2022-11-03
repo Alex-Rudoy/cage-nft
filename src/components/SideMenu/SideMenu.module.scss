@@ -4,12 +4,13 @@
   background: var(--white);
   position: absolute;
   width: 280px;
-  height: 900px;
-  padding: 41px 21px 0 13px;
+  min-height: 900px;
+  padding: 0 21px 0 13px;
+  z-index: 999;
   @include mixins.flex(column,start);
   @include mixins.atTablet() {
     &_hide {
-      padding: 41px 11px 0 11px;
+      padding: 0px 11px 0 11px;
       width: 70px;
     }
   }
@@ -50,13 +51,10 @@
 }
 
 .contentContainer{
-  //flex-grow: 1;
-  min-height: calc(100vh - 214px);
-  
+  flex-grow: 0.75;
   @include mixins.atTablet() {
-    min-height: calc(100vh - 214px);
     &_hide{
-      min-height: 476px;
+      flex-grow: 0.05;
     }
   }
 }
@@ -64,10 +62,6 @@
 nav {
   color: var(--gray-95);
   @include mixins.font(14px,16.7px);
-  @include mixins.atTablet() {
-    height: 310px;
-    padding-bottom: 23px;
-  }
 }
 
 footer {
@@ -89,7 +83,7 @@ footer {
         justify-content: center;
         align-content: end;
         gap: 28px 0;
-        height: 379px;
+        height: 424px;
         border-bottom: none;
       }
     }
@@ -111,9 +105,12 @@ footer {
     @include mixins.atTablet() {
       height: 45px;
       border-top:none;
-      span {
-        display:none;
+      .license {
+        &_hidden  {
+          display:none;
+        }
       }
+      
     }
   }
 }

@@ -1,0 +1,101 @@
+@use '../../styles/mixins.scss';
+
+.board {
+  height: 535px;
+  width: 1104px;
+  background: url("../../../public/images/homepage/board.jpg") no-repeat top 114px right;
+  
+  .duck {
+    position: absolute;
+    z-index: 2;
+    top: 90px;
+    right: 0;
+    background: url("../../../public/images/homepage/duck.png") no-repeat;
+    width: 478px;
+    height: 440px;
+  }
+}
+
+.container {
+  max-width: 1160px;
+  padding: 0 20px;
+  margin-left: 280px;
+  @include mixins.atTablet() {
+    margin-left: 70px;
+  }
+  .searchTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0 19px;
+    .subTitle {
+      @include mixins.font(14px,16.7px,400);
+      padding-top: 2px;
+      color: var(--gray-70);
+    }
+  }
+}
+
+.topNFTBlock {
+  @include mixins.flex(row,space-between,center,wrap);
+}
+
+.topNFTAllTime {
+  @include mixins.flex(row,space-between,center,wrap);
+}
+
+.topCreators {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+  padding: 33px 0 44px 0;
+  row-gap: 18px;
+  column-gap: 37px;
+  .creatorsInfo {
+    max-width: 344px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      @include mixins.font(14px,16.7px,400);
+      color: var(--gray-70);
+    }
+    .name {
+      padding-left: 15px;
+      margin-right: auto;
+    }
+    .traded {
+      text-align: right;
+    }
+    .avatar {
+      height: 56px;
+      width: 56px;
+      border-radius: 100%;
+      background: var(--white);
+      position: relative;
+      color: black;
+      img {
+        object-fit: cover;
+      }
+      .avatarBadge {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        top: -7px;
+        left: -2px;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        @include mixins.font(12px,14.65px,500);
+      }
+    }
+  }
+}
+
+.btnWrap {
+  padding-bottom: 49px;
+}

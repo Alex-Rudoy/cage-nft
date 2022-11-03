@@ -11,25 +11,34 @@
   overflow: hidden;
   border: none;
   outline: none;
+  //white-space: nowrap;
+  @include mixins.font(15px,18.3px,500);
   cursor: pointer;
   box-shadow: var(--shadow-xs);
 
   &_variant {
+    &_secondaryFilt {
+      background: var(--gray-10);
+      color: var(--gray-60);
+      width: 140px;
+      
+      &:hover {
+        background: var(--gray-30);
+        color: var(--gray-80);
+        stroke: var(--gray-80);
+      }
+    }
     &_primary {
       background: var(--primary-600);
       color: white;
-      stroke: white;
 
       &:hover {
-        background: var(--primary-700);
-        color: var(--primary-600);
-        stroke: var(--primary-600);
+        color: white;
       }
 
       &:active {
         background: var(--primary-800);
         color: var(--primary-600);
-        stroke: var(--primary-600);
       }
 
       &.disabled {
@@ -80,31 +89,15 @@
       }
     }
 
-    &_red {
-      background: white;
-      color: var(--error-700);
-      stroke: var(--error-700);
-      border: 1px solid var(--error-300);
-
-      &:hover {
-        background: var(--error-50);
-      }
-
-      &:active {
-        background: var(--error-200);
-      }
-
-      &.disabled {
-        color: var(--error-300);
-        stroke: var(--error-300);
-        border-color: var(--error-200);
-      }
-
-      &.loading {
-        .loader {
-          background-color: white;
-        }
-      }
+    &_bell {
+      background: var(--white);
+      color: white;
+      border-radius: var(--border-radius-10);
+    }
+  
+    &_light {
+      background: var(--white);
+      color: var(--primary-600);
     }
   }
 
@@ -112,19 +105,36 @@
     &_full {
       width: 100%;
     }
+    &_sm {
+      width: 140px;
+    }
   }
 
   &_size {
+    &_exsm {
+      width: 46px;
+      height: 44px;
+    }
     &_sm {
       height: 36px;
       padding: 0 14px;
     }
 
     &_md {
-      height: 40px;
-      padding: 0 16px;
+      height: 44px;
+      padding: 13px 16px;
     }
-
+  
+    &_mds {
+      height: 44px;
+      padding: 13px 22px;
+    }
+  
+    &_mdp {
+    
+    }
+  
+  
     &_lg {
       height: 44px;
       padding: 0 18px;

@@ -10,13 +10,15 @@
 }
 
 .switch_btn {
-  min-width: 93px;
-  padding: 11px 0;
   border: none;
   outline: none;
   cursor: pointer;
   background: inherit;
   @include mixins.font(14px,17px,500);
+  &_exsm {
+    width: 69px;
+    height: 31px;
+  }
   &_sm {
     min-width: 92px;
     padding: 7px 0;
@@ -25,6 +27,7 @@
     background: var(--white);
     box-shadow: var(--shadow-switch-btn);
     border-radius: var(--border-radius-10);
+    color: var(--primary)
   }
 }
 

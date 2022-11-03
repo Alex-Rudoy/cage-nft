@@ -14,6 +14,9 @@
     @include mixins.flex(row);
     cursor: pointer;
     padding-right: 10px;
+    @include mixins.atTablet() {
+      padding-right: 2px;
+    }
   }
 
   .rail {
@@ -24,7 +27,6 @@
     border-radius: 10px;
    
     background: var(--gray-00);
-    margin-right: 13px;
     padding: 2px;
     position: relative;
   }

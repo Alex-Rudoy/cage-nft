@@ -24,7 +24,7 @@ export const DropdownCallerComponent: React.FC<DropdownCallerProps> = ({
 
       {!text && <p>{placeholder}</p>}
 
-      <SvgIcon src={IconsEnum.arrowChevron} size={20} />
+      <SvgIcon src={IconsEnum.arrowChevron} size={24} />
     </div>
   );
 };

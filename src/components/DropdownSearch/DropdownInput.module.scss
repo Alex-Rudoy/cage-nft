@@ -1,0 +1,31 @@
+@use '../../styles/mixins.scss';
+
+.input {
+  min-width: 120px;
+  min-height: 40px;
+  padding: 11px 0 12px 0;
+  background-color: var(--gray-05);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  input {
+    width: 100%;
+    padding: 11px 0 12px 16px;
+    //background-color: var(--white);
+    color: var(--gray-60);
+    font-size: 14px;
+    line-height: 16.7px;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  @include mixins.flex(row, center, center);
+}

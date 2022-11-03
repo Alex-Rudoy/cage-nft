@@ -1,4 +1,4 @@
-export type DropdownSearchProps = {
+export type DropdownInputProps = {
   value: string;
   id: string;
   autoComplete?: string;

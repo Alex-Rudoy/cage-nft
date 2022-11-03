@@ -1,2 +1,2 @@
-export { DropdownSearchComponent as DropdownSearch } from './DropdownSearch.component';
-export * from './DropdownSearch.types';
+export { DropdownInputComponent as DropdownInput } from './DropdownInput.component';
+export * from './DropdownInput.types';

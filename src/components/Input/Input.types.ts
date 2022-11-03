@@ -1,5 +1,5 @@
 export type InputProps = {
-  value: string;
+  value: string | number | null;
   id: string;
   label?: string;
   autoComplete?: string;
@@ -8,7 +8,7 @@ export type InputProps = {
   className?: string;
   style?: React.CSSProperties;
   errorMessage?: string;
-  type?: 'password' | 'text';
+  type?: 'password' | 'text' | 'select';
   disabled?: boolean;
   leftBlock?: React.ReactNode;
   rightBlock?: React.ReactNode;

@@ -24,10 +24,11 @@
   {
     "title": "Fractional",
     "icon": "fract",
-    "children": [  {
-      "path": "/hot",
-      "title": "Hot"
-    },
+    "children": [
+      {
+        "path": "/hot",
+        "title": "Hot"
+      },
       {
         "path": "/upcoming",
         "title": "Upcoming"

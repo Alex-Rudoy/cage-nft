@@ -3,4 +3,5 @@ export const routes = (params?: Record<string, string>) => ({
   home: '/',
   marketplace: '/marketplace',
   marketplaceNft: '/marketplace/:id',
+  // account: '/account',
 });

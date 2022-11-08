@@ -13,7 +13,7 @@
     overflow: hidden;
     @include mixins.flex(row);
     cursor: pointer;
-    padding-right: 10px;
+    padding-right: clamp(0px,calc(1px + 0.2vw), 10px);
     @include mixins.atTablet() {
       padding-right: 2px;
     }

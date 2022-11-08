@@ -24,7 +24,7 @@ export const DropdownBaseComponent = React.forwardRef<
     {
       caller,
       disabled,
-      maxHeight = 625,
+      maxHeight,
       children,
       customState,
       placement = 'bottom',

@@ -53,3 +53,9 @@
     pointer-events: all;
   }
 }
+
+@media (max-height: 600px) {
+  .dropdown {
+    height: 597px;
+  }
+}

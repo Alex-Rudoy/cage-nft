@@ -7,6 +7,10 @@
   gap: 1px;
   padding: 4px;
   border-radius: var(--border-radius-10);
+  @include mixins.atMobile() {
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 
 .switch_btn {
@@ -14,6 +18,9 @@
   outline: none;
   cursor: pointer;
   background: inherit;
+  @include mixins.atMobile() {
+    flex: 1;
+  }
   @include mixins.font(14px,17px,500);
   &_exsm {
     width: 69px;
@@ -23,6 +30,11 @@
     min-width: 92px;
     padding: 7px 0;
   }
+  &_md {
+    width: 110px;
+    height: 34px;
+  }
+  
   &_active {
     background: var(--white);
     box-shadow: var(--shadow-switch-btn);

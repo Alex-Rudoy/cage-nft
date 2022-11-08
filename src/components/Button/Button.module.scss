@@ -88,6 +88,19 @@
         }
       }
     }
+    
+    &_lightBordered {
+      background: var(--white);
+      //padding: 7px 17px 6px 17px;
+      border-radius: 66px;
+      border: 2px solid var(--gray-15);
+      color: var(--primary);
+      @include mixins.font(14px,17px,500);
+      @include mixins.atMobile() {
+        padding: 9px 12px 9px 12px;
+        width: 100%;
+      }
+    }
 
     &_bell {
       background: var(--white);
@@ -130,8 +143,17 @@
       padding: 13px 22px;
     }
   
-    &_mdp {
+    &_mob {
+      height: 32px;
+      width: 141px;
+      padding: 7.5px 22px;
+      @include mixins.font(14px,17px,500);
+    }
     
+    &_lgETH {
+      width: 90px;
+      height: 33px;
+      @include mixins.font(14px,17px,500);
     }
   
   

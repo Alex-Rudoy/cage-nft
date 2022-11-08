@@ -14,6 +14,11 @@
       width: 70px;
     }
   }
+  @include mixins.atMobile () {
+    &_hide {
+     display: none;
+    }
+  }
   
   .header {
     marin: 0 auto;

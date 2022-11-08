@@ -5,73 +5,305 @@
   min-height: 369px;
   border-radius: var(--border-radius-10);
   overflow: hidden;
+  box-shadow: 0px 8px 21px rgba(227, 231, 237, 0.65);
+  @include mixins.atMobile() {
+    max-width: 168px;
+    min-height: 293px;
+  }
+  
   .image {
     position: relative;
+    @include mixins.atMobile() {
+      height: 168px;
+      width: 168px;
+    }
   }
+  
+  .imgwrap {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+      outline-width: 0;
+    }
+  }
+  
   .ethLabel {
-    @include mixins.font(16px,19.5px,500);
-    background: var(--white);
-    color: var(--primary);
-    width: 90px;
-    height: 33px;
-    border: 1px solid var( --gray-15);
-    border-radius: 66px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.font(16px, 19.5px, 500);
     position: absolute;
     bottom: 11px;
     right: 13px;
+    @include mixins.atMobile() {
+      button {
+        height: 26px;
+        width: 144px;
+      }
+      bottom: -110px;
+      right: 15px;
+    }
   }
+  
   .cardContent {
     position: relative;
+    
     .avatar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: white;
+      width: 48px;
+      height: 48px;
       border-radius: 100%;
-      border: 4px solid white;
-      position: absolute;
-      top: -20px;
-      left: 20px;
-    }
-    .badgeWrap {
-      background: white;
-      width: 15px;
-      height: 15px;
-      border-radius: 100%;
-    .badge {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      left: 7px;
-      top: 26px;
-    }
-    }
-    .textContent {
-      padding: 15px 0 14px 70px;
-      .subtitle {
-        @include mixins.font(12px,14.3px);
-        margin-bottom:  3px;
+      margin: -20px 0 0 15px;
+      @include mixins.atMobile() {
+        margin: -15px 0 0 9px;
+        width: 30px;
+        height: 30px;
+      }
+      
+      .whitecircle {
+        background: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        @include mixins.atMobile() {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
+    
+    .badgeWrap {
+      .badge {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 31px;
+        top: 35px;
+        @include mixins.atMobile() {
+          width: 30px;
+          height: 30px;
+          width: 11px;
+          height: 10.5px;
+          left: 26px;
+          top: 18px;
+        }
+      }
+      
+      .badgem {
+        position: absolute;
+        width: 11px;
+        height: 10.5px;
+        left: 10px;
+        top: 14px;
+      }
+    }
+    
+    .textContent {
+      padding: 0 0 14px 70px;
+      margin-top: -20px;
+      @include mixins.atMobile() {
+        padding: 21px 0 7px 13px;
+      }
+      
+      .subtitle {
+        @include mixins.font(12px, 14.3px);
+        margin-bottom: 3px;
+      }
+    }
+    
     .divider {
       height: 1px;
       background: var(--gray-10);
       min-width: 259px;
+      @include mixins.atMobile() {
+        display: none;
+      }
     }
+    
     .social {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
       padding: 9px 0 19px 20px;
-      @include mixins.font(12px,14.3px);
+        @include mixins.atMobile() {
+          padding: 0 0 9px 11px !important;
+        }
+      
+      .watch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .eyesIco {
+          background: url('../../../public/icons/card/eyes.svg') no-repeat center;
+          height: 18px;
+          width: 18px;
+          @include mixins.atMobile() {
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+      
+      .cont {
+        display: flex;
+        justify-content: space-between;
+        
+        .text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          .bubbleIco {
+            background: url('../../../public/icons/card/bubble.svg') no-repeat center;
+            height: 18px;
+            width: 18px;
+            @include mixins.atMobile() {
+              height: 14px;
+              width: 14px;
+            }
+          }
+          
+          &_likes {
+            .heartIco {
+              background: url('../../../public/icons/card/heart.svg') no-repeat center;
+              height: 18px;
+              width: 18px;
+              @include mixins.atMobile() {
+                height: 11px;
+                width: 12px;
+              }
+            }
+            @include mixins.atMobile() {
+              margin-right: 6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              background-color: white;
+              border-radius: 4px;
+              top: 0;
+              right: 0;
+              @include mixins.font(12px, 14px, 400);
+              padding: 5px 0 6px 9px;
+            }
+          }
+        }
+      }
+      
+      @include mixins.atMobile() {
+        flex-direction: column;
+        padding: 9px 0 19px 0;
+        .cont {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          
+          .text {
+            @include mixins.atMobile() {
+              display: flex;
+              align-items: start;
+            }
+            //justify-content: flex-start;
+          }
+        }
+        
+      }
+      
+      .ETHbtn {
+        position: absolute;
+        bottom: 11px;
+        right: 13px;
+      }
+      
+      @include mixins.font(12px, 14.3px);
+      
       span {
-        padding:0 16px 0 2px;
+        padding: 0 10px 0 2px;
       }
     }
   }
 }
+
+.container {
+  width: 539px;
+  height: 369px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: span 2;
+  @include mixins.atMobile() {
+    width: 345px;
+    height: 237px;
+  }
+  
+  .image {
+    top: 0;
+    object-fit: cover;
+  }
+  
+  .collectionContent {
+    height: 50px;
+    background: var(--white);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    
+    .textCollection {
+      width: 539px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 42px 13px 23px;
+      
+      .contgroup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      
+      .airdrop {
+        height: 26px;
+        min-width: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-20);
+        @include mixins.font(15px, 18.3px, 500);
+        padding: 4px 12px;
+        color: var(--primary-600);
+        border-radius: 7px;
+        cursor: pointer;
+        
+        &:hover {
+          background: #a0ceff;
+        }
+      }
+      
+      .readm {
+        color: var(--primary-600);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+      }
+    }
+  }
+  
+  margin-bottom: 10px;
+}
+
+//.watch {
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}

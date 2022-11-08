@@ -6,13 +6,14 @@ export enum ButtonVariantEnum {
   secondaryFilt = 'secondaryFilt',
   bell = 'bell',
   light = 'light',
+  lightBordered = 'lightBordered',
 }
 
 export type ButtonProps = {
   text?: string;
   id?: string;
   variant?: ButtonVariantEnum;
-  size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg';
+  size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg' | 'mob' | 'lgETH';
   width?: 'full' | 'content';
   icon?: IconsEnum;
   iconPosition?: 'left' | 'right';

@@ -6,6 +6,7 @@ import { Header } from '@components/Header';
 import { SideMenu } from '@components/SideMenu';
 import { Home } from '@pages/Home';
 import React, { ClipboardEvent, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { MarketplaceLayoutProps } from './MarketplaceLayout.types';
 
 import styles from './MarketplaceLayout.module.scss';
@@ -42,7 +43,10 @@ export const MarketplaceLayoutComponent: React.FC<
       <div className={styles.wrap}>
         <SideMenu userName={'Amanda Crouise'} />
         <Header />
-        <Home />
+        {/*<Home />*/}
+        <div className={styles.content}>
+          <Outlet />
+        </div>
         {/*<div className={styles.container}>*/}
         {/*  <div className={styles.board}>*/}
         {/*    <div className={styles.duck}></div>*/}

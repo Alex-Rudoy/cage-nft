@@ -12,10 +12,14 @@ export enum IconsEnum {
   eyess = '/icons/card/eyess.svg',
   bubble = '/icons/card/bubble.svg',
   right = '/icons/card/right.svg',
+  hearttt = '/images/card/heart.svg',
+  bub = '/images/card/bub.svg',
+  eyesm = '/images/card/eyesm.svg',
   //head
   heart = '/icons/header/heart.svg',
   bell = '/icons/header/bell.svg',
   arrowupdown = '/icons/header/arrowupdown.svg',
+  drop = 'icons/header/drop.svg',
   // common
   moda = '/icons/common/moda.svg',
   loader = '/icons/common/loader.svg',

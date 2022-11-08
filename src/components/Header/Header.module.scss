@@ -2,8 +2,7 @@
 
 .wrap {
   display: flex;
-  align-items: center;
-  //justify-content: space-between;
+  //align-items: center;
   position: fixed;
   max-width: 1440px;
   right: 0;
@@ -11,6 +10,22 @@
   margin: 0 auto;
   padding:10px 20px;
   z-index: 99;
+  @include mixins.atMobile() {
+    position: unset;
+    padding:10px 15px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    align-content: space-between;
+  }
+  .logo {
+    @include mixins.atMobile() {
+      background: url('../../../public/images/head/logomob.png') no-repeat center;
+      width: 88px;
+      height: 29px;
+    }
+  }
+
   .btnsLg {
     display: flex;
     align-items: center;
@@ -20,18 +35,64 @@
     @include mixins.atTablet() {
       display: none;
     }
+    @include mixins.atMobile() {
+      display: none;
+    }
   }
+  
   .input {
     padding-left: 280px;
     @include mixins.atTablet() {
       padding-left: 70px;
     }
+    @include mixins.atMobile() {
+      padding: 16px 0 0 0;
+      margin: 0 auto;
+    }
+  }
+  .dropSidebarBtn {
+    display: none;
+    @include mixins.atMobile() {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      display: block;
+      height: 32px;
+      width: 32px;
+      padding: 5px;
+      border: none;
+      line-height: 32px;
+      border-radius: 9px;
+      boreder: 1px solid red;
+      cursor: pointer;
+      &:hover {
+        background: var(--gray-05);
+      }
+    }
   }
 }
-
+.headMobile {
+  display: none;
+  @include mixins.atMobile() {
+    display: flex;
+    align-items: center;
+    .btnsMobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-left: auto;
+      
+    }
+  }
+}
 .btnsBlock {
   display: flex;
   margin-left: auto;
   gap: 9px;
   padding-left: clamp(15px, calc(10px + 2vw),200px);
+  @include mixins.atMobile() {
+    display: none;
+  }
 }

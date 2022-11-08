@@ -4,7 +4,12 @@
   height: 535px;
   width: 1104px;
   background: url("../../../public/images/homepage/board.jpg") no-repeat top 114px right;
-  
+  @include mixins.atMobile() {
+    background: #4c57cd;
+    border-radius: 10px;
+    height: 513px;
+    width: 100%;
+  }
   .duck {
     position: absolute;
     z-index: 2;
@@ -13,6 +18,9 @@
     background: url("../../../public/images/homepage/duck.png") no-repeat;
     width: 478px;
     height: 440px;
+    @include mixins.atMobile() {
+      display: none;
+    }
   }
 }
 
@@ -23,11 +31,43 @@
   @include mixins.atTablet() {
     margin-left: 70px;
   }
+  @include mixins.atMobile() {
+    margin-left: 0px;
+    padding: 0 15px;
+  }
   .searchTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 17px 0 19px;
+    .searchText {
+      padding: 24px 0 12px 0;
+    }
+    .btnswitcherM {
+      display: none;
+      @include mixins.atMobile() {
+        display: block;
+        padding-top: 12px;
+      }
+    }
+    @include mixins.atMobile() {
+      .btnswitcherM {
+        display: block;
+      }
+    }
+    
+    .btnswitcher{
+      @include mixins.atMobile() {
+        //flex-direction: column;
+        //align-items: flex-start;
+        display: none;
+      }
+     
+    }
+    @include mixins.atMobile() {
+      flex-direction: column;
+      align-items: flex-start;
+     
+    }
     .subTitle {
       @include mixins.font(14px,16.7px,400);
       padding-top: 2px;
@@ -37,37 +77,83 @@
 }
 
 .topNFTBlock {
-  @include mixins.flex(row,space-between,center,wrap);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px, 259px));
+  gap: 19px 21px;
+  @include mixins.atMobile() {
+    gap: 10px 9px;
+  }
+  justify-content: center;
+  align-items: start;
+  grid-auto-flow: dense;
+
+  &:nth-child(-n+2) {
+    justify-self: center;
+    align-self: center;
+  }
+  @include mixins.atMobile() {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 164px));
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: dense;
+    align-items: start;
+  }
 }
 
 .topNFTAllTime {
-  @include mixins.flex(row,space-between,center,wrap);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px, 259px));
+  gap: 17px 21px;
+  @include mixins.atMobile() {
+    gap: 9px 3px;
+  }
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: dense;
 }
+
 
 .topCreators {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  @include mixins.atTablet() {
+    grid-template-columns: repeat(auto-fit,minmax(300px, 344px));
+    grid-auto-flow: dense;
+    justify-content: space-around;
+    align-items: center;
+  }
   grid-auto-flow: column;
-  padding: 33px 0 44px 0;
+  padding-top: 33px;
   row-gap: 18px;
-  column-gap: 37px;
+  column-gap: clamp(15px,calc(10px + 0.3vw), 37px);
   .creatorsInfo {
     max-width: 344px;
     height: 58px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3px;
+    @include mixins.atMobile() {
+      width: 100%;
+    }
+    
     span {
       @include mixins.font(14px,16.7px,400);
       color: var(--gray-70);
     }
     .name {
-      padding-left: 15px;
+      padding-left: 12px;
       margin-right: auto;
+      .ETHvalue {
+        @include mixins.font(12px,14.65px,500);
+        color: var(--gray-85);
+      }
     }
     .traded {
       text-align: right;
     }
+    
     .avatar {
       height: 56px;
       width: 56px;
@@ -75,27 +161,56 @@
       background: var(--white);
       position: relative;
       color: black;
-      img {
-        object-fit: cover;
+      @include mixins.atMobile() {
+        height: 40px;
+        width: 40px;
       }
+      .imgwrap {
+        position: relative;
+        padding-bottom: 100%;
+        height: 0;
+        overflow: hidden;
+    
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-width: 0;
+          outline-width: 0;
+        }
+      }
+      
       .avatarBadge {
         position: absolute;
         height: 24px;
         width: 24px;
         border-radius: 100%;
-        top: -7px;
-        left: -2px;
+        top: -3px;
+        left: -1px;
         background: var(--white);
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--primary);
         @include mixins.font(12px,14.65px,500);
+        @include mixins.atMobile{
+          top: -7px;
+          left: -7px;
+        }
       }
     }
   }
 }
 
-.btnWrap {
-  padding-bottom: 49px;
+.btnswitcherM {
+  display: none;
+  @include mixins.atMobile() {
+    display: block;
+  }
+}
+
+.btnWrapper {
+  padding: 16px 0 24px 0;
 }

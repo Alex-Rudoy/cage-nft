@@ -1,16 +1,11 @@
-import { BtnsSwitcher } from '@components/BtnsSwitcher';
 import { Button, ButtonVariantEnum } from '@components/Button';
 import { DropdownComponent } from '@components/Dropdown/Dropdown.component';
-import { InputComponent } from '@components/Input/Input.component';
+import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 import { ThemeToggleComponent } from '@components/ThemeToggle';
-import { buttonsList } from '@layout/MarketplaceLayout/constants';
 import { getUUID } from '@utils/getUUID';
 import React, { useState } from 'react';
-import classNames from 'classnames';
-import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 
 // import { HeaderProps } from './Header.types';
-
 import styles from './Header.module.scss';
 
 export const HeaderComponent: React.FC<any> = () => {
@@ -21,6 +16,19 @@ export const HeaderComponent: React.FC<any> = () => {
 
   return (
     <div className={styles.wrap}>
+      <div className={styles.headMobile}>
+        <div className={styles.logo}></div>
+        <div className={styles.btnsMobile}>
+          <Button
+            text={'Connect wallet'}
+            variant={ButtonVariantEnum.primary}
+            size={'mob'}
+          />
+          <div className={styles.dropSidebarBtn}>
+            <SvgIcon src={IconsEnum.drop} />
+          </div>
+        </div>
+      </div>
       <div className={styles.input}>
         <DropdownComponent
           showSearch={true}
@@ -62,11 +70,13 @@ export const HeaderComponent: React.FC<any> = () => {
         {/*/>*/}
       </div>
       <div className={styles.btnsBlock}>
-        <ThemeToggleComponent
-          id={getUUID()}
-          onClick={() => setCheck(!check)}
-          checked={check}
-        />
+        <div className={styles.toggler}>
+          <ThemeToggleComponent
+            id={getUUID()}
+            onClick={() => setCheck(!check)}
+            checked={check}
+          />
+        </div>
         <div className={styles.bell}>
           <Button
             variant={ButtonVariantEnum.bell}

@@ -51,7 +51,7 @@ export const HomeComponent: React.FC = () => {
           <div className={styles.duck}></div>
         </div>
         <div className={styles.searchTitle}>
-          <div>
+          <div className={styles.searchText}>
             <h3>Top NFT per 24 hours</h3>
             <div className={styles.subTitle}>
               Showed more than 10 938 collections
@@ -70,47 +70,55 @@ export const HomeComponent: React.FC = () => {
             src={'images/card/bluemonkey.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/2.png'}
             srcAva={'images/card/avaphoto.png'}
             nickname={'Rodion Kutsaev'}
-            variant={'Editional'}
+            title={'Editional'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/3.png'}
             nickname={'Rodion Kutsaev'}
-            variant={'Editional'}
+            title={'Editional'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/3.png'}
             nickname={'Rodion Kutsaev'}
-            variant={'Editional'}
+            title={'Editional'}
           />
           <CardNFT
-            currentButtonId={buttonList2CurrentId}
-            src={'images/card/4.png'}
-            nickname={'Rodion Kutsaev'}
-            variant={'Editional'}
-          />
-          <CardNFT
-            currentButtonId={buttonList2CurrentId}
-            src={'images/card/4.png'}
-            nickname={'Rodion Kutsaev'}
-            variant={'Editional'}
-          />
-          <CardCollection
             src={'images/card/collect.png'}
-            variant={'3D Sol Kitties #2920'}
+            title={'3D Sol Kitties #2920'}
             currentButtonId={buttonList2CurrentId}
+            variant={'collection'}
+          />
+          <CardNFT
+            currentButtonId={buttonList2CurrentId}
+            src={'images/card/4.png'}
+            nickname={'Rodion Kutsaev'}
+            title={'Editional'}
+          />
+          <CardNFT
+            currentButtonId={buttonList2CurrentId}
+            src={'images/card/4.png'}
+            nickname={'Rodion Kutsaev'}
+            title={'Editional'}
+          />
+        </div>
+        <div className={styles.btnWrapper}>
+          <Button
+            variant={ButtonVariantEnum.light}
+            width={'full'}
+            text={'View all'}
           />
         </div>
         <div className={styles.searchTitle}>
-          <div>
+          <div className={styles.searchText}>
             <h3>Top creators</h3>
             <div className={styles.subTitle}>
               Showed more than 20 collections
@@ -123,23 +131,18 @@ export const HomeComponent: React.FC = () => {
             size={'sm'}
           />
         </div>
-        <Button
-          variant={ButtonVariantEnum.light}
-          width={'full'}
-          text={'View all'}
-        />
         <div className={styles.topCreators}>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/1.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/1.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>1</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -149,14 +152,16 @@ export const HomeComponent: React.FC = () => {
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
               {/*{srcAvatar && */}
-              <img src={'icons/avatars/2.png'} alt="userAvatar" />
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/2.png'} alt="userAvatar" />
+              </div>
               {/*}*/}
               <div className={styles.avatarBadge}>2</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -165,15 +170,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/3.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/3.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>3</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -182,15 +187,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/4.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/4.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>4</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -199,15 +204,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/5.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/5.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>5</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -216,15 +221,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/6.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/6.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>6</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -233,15 +238,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/7.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/7.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>7</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -250,15 +255,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/8.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/8.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>8</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -267,15 +272,15 @@ export const HomeComponent: React.FC = () => {
           </div>
           <div className={styles.creatorsInfo}>
             <div className={styles.avatar}>
-              {/*{srcAvatar && */}
-              <img src={'icons/avatars/9.png'} alt="userAvatar" />
-              {/*}*/}
+              <div className={styles.imgwrap}>
+                <img src={'icons/avatars/9.png'} alt="userAvatar" />
+              </div>
               <div className={styles.avatarBadge}>9</div>
             </div>
             <div className={styles.name}>
               <h4>John Sacarty</h4>
               <span>Earned</span>
-              <span>0.233 ETH</span>
+              <span className={styles.ETHvalue}>0.233 ETH</span>
             </div>
             <div className={styles.traded}>
               <h4>$1 039 234</h4>
@@ -283,8 +288,15 @@ export const HomeComponent: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className={styles.btnWrapper}>
+          <Button
+            variant={ButtonVariantEnum.light}
+            width={'full'}
+            text={'View all'}
+          />
+        </div>
         <div className={styles.searchTitle}>
-          <div>
+          <div className={styles.searchText}>
             <h3>Top NFT per all time</h3>
             <div className={styles.subTitle}>
               Showed more than 20 collections
@@ -303,54 +315,48 @@ export const HomeComponent: React.FC = () => {
             src={'images/card/5.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
-          <CardCollection
+          <CardNFT
             src={'images/card/collect.png'}
-            variant={'3D Sol Kitties #2920'}
+            title={'3D Sol Kitties #2920'}
             currentButtonId={buttonList2CurrentId}
+            variant={'collection'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/6.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/7.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/8.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/9.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
+            title={'3D render in Blender'}
           />
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/8.png'}
             srcAva={'images/card/ava.png'}
             nickname={'MagicEdenEscrow_1'}
-            variant={'3D render in Blender'}
-          />
-        </div>
-        <div className={styles.btnWrap}>
-          <Button
-            variant={ButtonVariantEnum.light}
-            width={'full'}
-            text={'View all'}
+            title={'3D render in Blender'}
           />
         </div>
       </div>

@@ -1,7 +1,6 @@
 export type AvatarProps = {
-  name: string;
-  lastName?: string;
   src?: string;
+  msgsValue?: number | null;
   className?: string;
   isOnline?: boolean;
 };

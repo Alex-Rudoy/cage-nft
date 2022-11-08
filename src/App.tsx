@@ -1,12 +1,11 @@
 import React from 'react';
-import { Routes, Route, useLocation, useRoutes } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { routes } from './app.routing';
+
 import { routerData } from './routing/routesData';
 
 const App: React.FC = () => {
   const location = useLocation();
-  // const appRouting = useRoutes(routes);
 
   return (
     <TransitionGroup component={null}>
@@ -18,6 +17,7 @@ const App: React.FC = () => {
         <Routes location={location}>
           {routerData.map((route) => {
             const { path, Component, children } = route;
+
             return (
               <Route key={path} path={path} element={<Component />}>
                 {children &&

@@ -27,7 +27,7 @@ export const SideMenuComponent: React.FC<SideMenuProps> = ({ userName }) => {
           className={cn(styles.header, { [styles.header_hide]: open })}
         ></header>
         <div className={styles.mailContent}>
-          <Avatar name={'Alex'} src={'images/user/ava.png'} />
+          <Avatar src={'/images/user/ava.png'} />
           <div className={cn(styles.user, { [styles.hide]: open })}>
             <span className={styles.name}>{userName}</span>
             <br />

@@ -1,0 +1,64 @@
+@use '../../styles/mixins.scss';
+
+.wrap {
+  height: 100vh;
+  pading-top: 79px;
+  
+  .imgwrap {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+      outline-width: 0;
+    }
+  }
+}
+
+.content {
+  max-width: 1160px;
+  height: 900px;
+  margin-left: 280px;
+  padding: 79px 20px 0 36px;
+  @include mixins.atTablet() {
+    margin-left: 70px;
+  }
+  @include mixins.atMobile() {
+    margin-left: 0px;
+    padding: 0 15px;
+  }
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  gap: 16px 14px;
+  
+  .rightBlock {
+    .update {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 19px;
+      div {
+        display: flex;
+        gap: 4px;
+        cursor: pointer;
+      }
+      @include mixins.font(16px,19.5px,500);
+      color: var(--gray-85);
+    }
+    
+    h2 {
+      margin: 0;
+      @include mixins.font(32px,39px,700);
+      color: var(--gray-95);
+    }
+  }
+}
+
+

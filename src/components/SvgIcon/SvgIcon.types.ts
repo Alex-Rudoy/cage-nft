@@ -1,12 +1,6 @@
 import { colorType } from '@typings/color';
 
 export enum IconsEnum {
-  // account
-  shield = '/icons/account/shield.svg',
-  guide = '/icons/account/guide.svg',
-  email = '/icons/account/email.svg',
-  sms = '/icons/account/sms.svg',
-
   //CARD
   heartt = '/icons/card/heart.svg',
   eyess = '/icons/card/eyess.svg',
@@ -15,6 +9,11 @@ export enum IconsEnum {
   hearttt = '/images/card/heart.svg',
   bub = '/images/card/bub.svg',
   eyesm = '/images/card/eyesm.svg',
+
+  //NFT PAGES
+  reply = '/icons/nftPage/reply.svg',
+  share = '/icons/nftPage/share.svg',
+  reload = '/icons/nftPage/reload.svg',
   //head
   heart = '/icons/header/heart.svg',
   bell = '/icons/header/bell.svg',
@@ -52,29 +51,11 @@ export enum IconsEnum {
   filter = '/icons/common/filter.svg',
   play = '/icons/common/play.svg',
   check = '/icons/common/check.svg',
-  filePlus = '/icons/common/file-plus.svg',
-  alertTriangle = '/icons/common/alert-triangle.svg',
-  pie = '/icons/common/pie.svg',
-  clock = '/icons/common/clock.svg',
-  envelope = '/icons/common/envelope.svg',
-  // bell = '/icons/common/bell.svg',
   data = '/icons/common/data.svg',
-  alert = '/icons/common/alert.svg',
-  mobile = '/icons/common/mobile.svg',
+
   tag = '/icons/common/tag.svg',
-  adminPanel = '/icons/common/admin-panel.svg',
-  publish = '/icons/common/publish.svg',
-  editPencil = '/icons/common/edit-pencil.svg',
-  moreHorizontal = '/icons/common/more-horizontal.svg',
-  dollar = '/icons/common/dollar.svg',
-  lock = '/icons/common/lock.svg',
-  award = '/icons/common/award.svg',
-  upload = '/icons/common/upload-cloud.svg',
   font = '/icons/common/font.svg',
   lineChartUp = '/icons/common/line-chart-up.svg',
-  switchHorizontal = '/icons/common/switch-horizontal.svg',
-  announcement = '/icons/common/announcement.svg',
-  lifeBuoy = '/icons/common/life-buoy.svg',
   config = '/icons/common/config.svg',
   checkCircleBlue = '/icons/common/checkCircleBlue.svg',
   monitor = '/icons/common/monitor.svg',
@@ -85,18 +66,6 @@ export enum IconsEnum {
   moon = '/icons/theme/moon.svg',
   sun = '/icons/theme/sun.svg',
   sunwhite = '/icons/theme/sunwhite.svg',
-  // campaigns
-  draft = '/icons/campaigns/draft.svg',
-  scheduled = '/icons/campaigns/Scheduled.svg',
-  sending = '/icons/campaigns/Sending.svg',
-  complete = '/icons/campaigns/Sent.svg',
-  sent = '/icons/campaigns/Sent.svg',
-  archived = '/icons/campaigns/Archived.svg',
-  mail = '/icons/campaigns/mail.svg',
-  message = '/icons/campaigns/message.svg',
-  refresh = '/icons/common/refresh-cw.svg',
-  glob = '/icons/common/globe.svg',
-  info = '/icons/common/info.svg',
 
   // menu
   automate = '/icons/menu/automate.svg',
@@ -121,84 +90,6 @@ export enum IconsEnum {
   Telegram = '/icons/menu/telegram.svg',
   Discord = '/icons/menu/discord.svg',
   Youtube = '/icons/menu/youtube.svg',
-  // ava = '/icons/menu/ava.svg',
-  gettingStarted = '/icons/menu/getting-started.svg',
-  videoTutorials = '/icons/menu/video-tutorials.svg',
-  reportBug = '/icons/menu/report-bug.svg',
-  requestFeature = '/icons/menu/request-feature.svg',
-  changeLog = '/icons/menu/change-log.svg',
-  documentation = '/icons/menu/documentation.svg',
-  chatSupport = '/icons/menu/chat-support.svg',
-
-  apiKey = '/icons/menu/api-key.svg',
-  notificationSettings = '/icons/menu/notification-settings.svg',
-  roles = '/icons/menu/roles.svg',
-  messagingSetup = '/icons/menu/messaging-setup.svg',
-  dataDictionary = '/icons/menu/data-dictionary.svg',
-
-  account = '/icons/menu/account.svg',
-  billing = '/icons/menu/billing.svg',
-  logout = '/icons/menu/log-out.svg',
-
-  // integrations
-  google = '/icons/integrations/google.svg',
-
-  // segments
-  event = '/icons/segments/event.svg',
-  attribute = '/icons/segments/attribute.svg',
-  segment = '/icons/segments/segment.svg',
-  shopifyGrayscale = '/icons/segments/shopify-grayscale.svg',
-  occurs = '/icons/segments/occurs.svg',
-  firstOccurred = '/icons/segments/first-occured.svg',
-  lastOccurred = '/icons/segments/last-occured.svg',
-  shopify = '/icons/common/shopify.svg',
-  calendar = '/icons/segments/calendar.svg',
-
-  // change password
-  key = '/icons/changePassword/key.svg',
-  // TODO: Eugen Krivenko - delete after icon will come from backend
-  javascript = '/icons/javascript.svg',
-
-  //flags
-  indonesia = '/icons/flags/Indonesia.svg',
-
-  // flows
-  rocket = '/icons/flows/rocket.svg',
-  lightning = '/icons/flows/lightning.svg',
-  chevrons = '/icons/flows/chevrons-right.svg',
-  addTag = '/icons/flows/add-tag.svg',
-  removeTag = '/icons/flows/remove-tag.svg',
-  forms = '/icons/flows/forms.svg',
-  messageSquare = '/icons/flows/message-square.svg',
-  mailSquare = '/icons/flows/mail-square.svg',
-  server = '/icons/flows/server.svg',
-  smartphone = '/icons/flows/smartphone.svg',
-  addSegment = '/icons/flows/add-segment.svg',
-  removeSegment = '/icons/flows/remove-segment.svg',
-  facebookAdd = '/icons/flows/facebook-add.svg',
-  facebookRemove = '/icons/flows/facebook-remove.svg',
-  splitPath = '/icons/flows/split-path.svg',
-  trueFalse = '/icons/flows/true-false.svg',
-  percentageSplit = '/icons/flows/random-percentage-split.svg',
-  waitCondition = '/icons/flows/wait-condition.svg',
-  waitDuration = '/icons/flows/wait-duration.svg',
-  waitTimeWindow = '/icons/flows/wait-time-window.svg',
-  sendToFlow = '/icons/flows/send-to-flow.svg',
-  exitSegment = '/icons/flows/exit-segment.svg',
-
-  // Networks
-  // twitter = '/icons/networks/twitter.svg',
-  facebook = '/icons/networks/facebook.svg',
-  instagram = '/icons/networks/instagram.svg',
-  linkedin = '/icons/networks/linkedin.svg',
-  tiktok = '/icons/networks/tiktok.svg',
-  // youtube = '/icons/networks/youtube.svg',
-  twitterOutline = '/icons/networks/twitter_outline.svg',
-  facebookOutline = '/icons/networks/facebook_outline.svg',
-  instagramOutline = '/icons/networks/instagram_outline.svg',
-  linkedinOutline = '/icons/networks/linkedin_outline.svg',
-  tiktokOutline = '/icons/networks/tiktok_outline.svg',
-  youtubeOutline = '/icons/networks/youtube_outline.svg',
 }
 
 export type SvgIconProps = {

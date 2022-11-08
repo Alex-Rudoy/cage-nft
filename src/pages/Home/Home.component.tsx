@@ -4,6 +4,7 @@ import { CardCollection } from '@components/CardCollection';
 import { CardNFT } from '@components/CardNFT';
 import { BUTTON_CONFIG_LIST_2 } from '@components/Dropdown/constants';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 
 // import styles from './Home.module.scss';
@@ -65,13 +66,16 @@ export const HomeComponent: React.FC = () => {
           />
         </div>
         <div className={styles.topNFTBlock}>
-          <CardNFT
-            currentButtonId={buttonList2CurrentId}
-            src={'images/card/bluemonkey.png'}
-            srcAva={'images/card/ava.png'}
-            nickname={'MagicEdenEscrow_1'}
-            title={'3D render in Blender'}
-          />
+          <Link to={`/marketplace/777`}>
+            <CardNFT
+              id={'777'}
+              currentButtonId={buttonList2CurrentId}
+              src={'images/card/bluemonkey.png'}
+              srcAva={'images/card/ava.png'}
+              nickname={'MagicEdenEscrow_1'}
+              title={'3D render in Blender'}
+            />
+          </Link>
           <CardNFT
             currentButtonId={buttonList2CurrentId}
             src={'images/card/2.png'}

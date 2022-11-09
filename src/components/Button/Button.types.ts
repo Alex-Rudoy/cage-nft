@@ -13,8 +13,8 @@ export type ButtonProps = {
   text?: string;
   id?: string;
   variant?: ButtonVariantEnum;
-  size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg' | 'mob' | 'lgETH';
-  width?: 'full' | 'content';
+  size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg' | 'lg-2' | 'mob' | 'lgETH';
+  width?: 'full' | 'content' | 'md';
   icon?: IconsEnum;
   iconPosition?: 'left' | 'right';
   onClick?: (

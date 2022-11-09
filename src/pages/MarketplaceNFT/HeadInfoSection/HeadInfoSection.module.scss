@@ -1,0 +1,52 @@
+@use '../../../styles/mixins.scss';
+
+.update {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 19px;
+  div {
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+  }
+  @include mixins.font(16px,19.5px,500);
+  color: var(--gray-85);
+}
+
+h2 {
+  margin: 0;
+  @include mixins.font(32px,39px,700);
+  color: var(--gray-95);
+}
+.contentBlock {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+  margin-bottom: 15px;
+  .collection,.owner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .contentInfo {
+    
+    }
+  }
+}
+
+.contentText {
+  max-width: 443px;
+  min-height: 50px;
+  @include mixins.font(18px,24.7px,500);
+  color: var(--gray-85);
+  margin-bottom: 16px;
+}
+
+.rightBlock {
+  .nftPrice {
+    max-height: 174px;
+    width: 100%;
+    border-radius: var(--border-radius-12);
+    background-color: var(--white);
+  }
+}

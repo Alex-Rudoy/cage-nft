@@ -1,22 +1,5 @@
 @use '../../styles/mixins.scss';
 
-//.avatar {
-//  width: 44px;
-//  min-width: 44px;
-//  height: 44px;
-//  min-height: 44px;
-//  @include mixins.flex(row, center, center);
-//  border-radius: 50px;
-//  overflow: hidden;
-//  background: var(--primary-50);
-//  position: relative;
-//
-//  img {
-//    width: 100%;
-//    height: 100%;
-//  }
-//}
-
 .avatar {
   width: 44px;
   min-width: 44px;

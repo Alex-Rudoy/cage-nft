@@ -1,8 +1,14 @@
 import { Avatar } from '@components/Avatar';
+import { Button, ButtonVariantEnum } from '@components/Button';
 import { IconsEnum, SvgIcon } from '@components/SvgIcon';
+import { FractionPriceSection } from '@pages/MarketplaceNFT/FractionPriceSection';
+import { HeadInfoSection } from '@pages/MarketplaceNFT/HeadInfoSection';
+import { MarketpalceNFTProps } from '@pages/MarketplaceNFT/MarketpalceNFT.types';
+import { NFTPage } from '@pages/NFTPage';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './MarketplaceNFT.module.scss';
+import Items from './MarketpalceNFTData.json';
 
 export const MarketplaceNFTComponent: React.FC = () => {
   const { id } = useParams();
@@ -16,24 +22,8 @@ export const MarketplaceNFTComponent: React.FC = () => {
           <div>Chat</div>
         </div>
         <div className={styles.rightBlock}>
-          <div className={styles.update}>
-            <div>
-              <SvgIcon src={IconsEnum.reload} size={19} />
-              <span>Reload</span>
-            </div>
-            <div>
-              <SvgIcon src={IconsEnum.share} size={19} />
-              <span>Share</span>
-            </div>
-          </div>
-          <h2>King of Da Street #8839</h2>
-          <div className={styles.contentBlock}>
-            <div className={styles.owner}>
-              <Avatar src={'/images/user/nftava.png'} msgsValue={null} />
-              <div></div>
-            </div>
-            <div className={styles.collection}></div>
-          </div>
+          <HeadInfoSection />
+          <FractionPriceSection variant={2} />
         </div>
       </div>
     </div>

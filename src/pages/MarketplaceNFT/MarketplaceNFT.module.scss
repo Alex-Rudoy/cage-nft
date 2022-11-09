@@ -38,27 +38,89 @@
   grid-template: 1fr 1fr/ 1fr 1fr;
   gap: 16px 14px;
   
-  .rightBlock {
-    .update {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 19px;
-      div {
-        display: flex;
-        gap: 4px;
-        cursor: pointer;
-      }
-      @include mixins.font(16px,19.5px,500);
-      color: var(--gray-85);
-    }
-    
-    h2 {
-      margin: 0;
-      @include mixins.font(32px,39px,700);
-      color: var(--gray-95);
-    }
+  .bold {
+    @include mixins.font(16px, 19.5px, 700);
   }
+  
+  
+  //.nftPrice {
+  //  background: var(--white);
+  //  border-radius: var(--border-radius-12);
+  //  margin: 0 0 12px 0;
+  //  overflow: hidden;
+  //  .contentTitle {
+  //    @include mixins.font(14px, 17px, 500);
+  //    color: var(--gray-85);
+  //  }
+  //
+  //  .priceTitle {
+  //    @include mixins.font(14px, 17px, 500);
+  //    color: var(--gray-80);
+  //  }
+  //
+  //  .price {
+  //    @include mixins.font(20px, 24.4px, 500);
+  //    color: var(--gray-95);
+  //  }
+  //
+  //  .nftPriceItems {
+  //    display: flex;
+  //    align-items: center;
+  //    gap: 32px;
+  //    padding: 24px 0 21px 23px;
+  //  }
+  //
+  //  .btnsGroup {
+  //    display: flex;
+  //    align-items: center;
+  //    justify-content: center;
+  //    gap: 8px;
+  //    padding: 12px 23px 22px 23px;
+  //    border-top: 1px solid var(--gray-10);
+  //  }
+  //  .soldWrap {
+  //    .progressLine {
+  //      background-color:var(--gray-15);
+  //      height: 7px;
+  //      .progressWidth {
+  //        height: 7px;
+  //        width: 40%;
+  //        background-color:var(--primary);
+  //      }
+  //    }
+  //    .sold {
+  //      display: flex;
+  //      align-items: center;
+  //      justify-content: space-between;
+  //      margin: 0 23px;
+  //      padding: 11px 0 12px 0;
+  //      border-top: 1px solid var(--gray-10);
+  //      .soldInfo {
+  //        display: flex;
+  //        align-items: center;
+  //        gap: 10px;
+  //        .soldText {
+  //          @include mixins.font(16px, 19px, 400);
+  //          color: var(--gray-80)
+  //        }
+  //        .soldAmount {
+  //          @include mixins.font(16px, 19.5px, 500);
+  //          color: var(--gray-95);
+  //        }
+  //      }
+  //      .sales {
+  //        @include mixins.font(16px, 19px, 400);
+  //        color: var(--error);
+  //        padding: 4px 8px 5px 7px;
+  //        background: rgba(223, 75, 65, 0.05);
+  //        border-radius: 7px;
+  //        b {
+  //          padding-right: 5px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //}
+  
 }
-
-

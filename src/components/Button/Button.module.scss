@@ -111,6 +111,7 @@
     &_light {
       background: var(--white);
       color: var(--primary-600);
+      border: 1px solid var(--gray-10);
     }
   }
 
@@ -120,6 +121,10 @@
     }
     &_sm {
       width: 140px;
+    }
+    &_md {
+      width: 90%;
+      max-width: 234px;
     }
   }
 
@@ -160,6 +165,11 @@
     &_lg {
       height: 44px;
       padding: 0 18px;
+    }
+    
+    &_lg-2 {
+      height: 51px;
+      padding: 0 13px;
     }
   }
 

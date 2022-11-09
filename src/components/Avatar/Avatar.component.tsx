@@ -9,7 +9,7 @@ export const AvatarComponent: React.FC<AvatarProps> = ({
   src = '/public/images/card/ava.png',
   className,
   msgsValue,
-  isOnline = true,
+  isOnline,
 }) => {
   const onlineFlagCircle = classNames(styles.onlineBadge, {
     [styles[`onlineBadge__offline`]]: !isOnline,
@@ -24,7 +24,7 @@ export const AvatarComponent: React.FC<AvatarProps> = ({
       ) : (
         <>
           <div className={styles.mediumCircle}></div>
-          <div className={styles.onlineBadge}></div>
+          {isOnline && <div className={styles.onlineBadge}></div>}
           <div className={styles.upCircle}></div>
         </>
       )}

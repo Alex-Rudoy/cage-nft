@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import { InputProps } from './Input.types';
 
@@ -15,6 +15,7 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
       placeholder = 'Search by name of collection',
       className,
       style,
+      variant = 'header',
       // errorMessage,
       value,
       disabled,
@@ -42,9 +43,12 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
       onBlur(e);
     };
 
-    const inputClass = classNames(
+    const inputClass = cn(
       styles.input,
-      { [styles.input_focused]: isFocused },
+      {
+        [styles.input_focused]: isFocused,
+        [styles[`input_variant_${variant}`]]: variant,
+      },
       className
     );
 
@@ -56,7 +60,11 @@ export const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={inputClass} style={style}>
         {!!label && <p className={styles.inputLabel}>{label}</p>}
-        <div className={styles.inner}>
+        <div
+          className={cn(styles.inner, {
+            [styles[`inner_${variant}`]]: variant,
+          })}
+        >
           {leftBlock && (
             <div
               className={styles.leftBlock}

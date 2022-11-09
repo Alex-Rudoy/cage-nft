@@ -8,6 +8,7 @@ export type InputProps = {
   className?: string;
   style?: React.CSSProperties;
   errorMessage?: string;
+  variant?: string;
   type?: 'password' | 'text' | 'select';
   disabled?: boolean;
   leftBlock?: React.ReactNode;

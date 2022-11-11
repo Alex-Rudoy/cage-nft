@@ -1,0 +1,149 @@
+@use '../../../styles/mixins.scss';
+
+
+.wrap {
+  background-color: var(--white);
+  border-radius: var(--border-radius-8);
+  margin-top: 12px;
+  .sectionTitle {
+    padding: 16px 0 17px 26px;
+    border-bottom: 1px solid var(--gray-10);
+    @include mixins.font(20px, 24.4px, 500);
+    color: var(--gray-95);
+  }
+  .btnSwitcher {
+    padding: 11px 12px 16px 12px;
+  }
+  
+  .detailsList {
+    .adresLink {
+      color: var(--primary);
+    }
+    .deteailsRow {
+      padding:15px 17px 15px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      border-top: 1px solid var(--gray-10);
+      @include mixins.font(16px, 19.5px, 500);
+      color: var(--gray-85);
+    }
+  }
+  .properties {
+    display: grid;
+    grid-template-columns:repeat(3, 33%);
+    grid-template-rows: 1fr 1fr;
+    gap: 23px 5px;
+    padding: 7px 0 28px 26px;
+  .propItem {
+    padding-bottom: 1px;
+    .prop1 {
+      @include mixins.font(16px, 19.5px, 500);
+      color: var(--gray-85);
+    }
+    .prop2 {
+      @include mixins.font(18px, 24.7px, 500);
+      color: var(--gray-95);
+    }
+    .prop3 {
+      @include mixins.font(14px, 16.7px, 400);
+      color: var(--gray-70);
+    }
+  }
+  }
+  
+  .bids {
+    padding: 9px 19px 8px 31px;
+    .bidsItem {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      .info {
+        padding-left: 12px;
+        +span {
+          margin:0 5px 4px 0;
+          @include mixins.font(14px, 17.1px, 500);
+          color: var(--gray-85);
+        }
+        .infoId {
+          @include mixins.font(14px, 16.7px, 500);
+          color: var(--gray-70);
+          padding-left: 1.4vw;
+        }
+        div {
+          @include mixins.font(16px, 19.5px, 700);
+          color: var(--gray-95);
+        }
+      }
+      .higestBid {
+        border: 1px solid var(--gray-10);
+        box-shadow: 0px 4px 14px #DFE6ED;
+        min-height: 29px;
+        margin-left: auto;
+        border-radius: var(--border-radius-8);
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mixins.font(14px, 17.1px, 500);
+        background: -webkit-linear-gradient(#47C690, #3EB2D7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        div {
+        
+        }
+      }
+    }
+  }
+}
+
+
+//properties
+//type
+//@include mixins.font(16px, 19.5px, 500);
+//color: var(--gray-85);
+//
+//Hape APE
+//@include mixins.font(18px, 24.7px, 500);
+//color: var(--gray-95);
+//
+//rarity 90.0%
+//@include mixins.font(14px, 16.7px, 400);
+//color: var(--gray-70);
+
+//bids
+//Avatar 44x44
+//Expiration: 6h 59m
+//@include mixins.font(14px, 17.1px, 500);
+//color: var(--gray-85);
+//
+//10.043439 ETH & EQDIU...vW7IWM
+//@include mixins.font(16px, 19.5px, 700);
+//color: var(--gray-95);
+//
+//from
+//@include mixins.font(16px, 19.1px, 400);
+//color: var(--gray-85);
+//
+//Highest bid BTN
+//@include mixins.font(14px, 17.1px, 500);
+//color: linear-gradient(#47C690б,#3EB2D7);
+
+//history
+
+//6 hours ago
+//@include mixins.font(14px, 17.1px, 500);
+//color: var(--gray-85);
+//
+//ID 32294-234
+//@include mixins.font(14px, 16.7px, 400);
+//color: var(--gray-70);
+//
+//Listed for & by
+//@include mixins.font(16px, 19.1px, 400);
+//color: var(--gray-85);
+//
+//5.009 ETH & 0x54b98ea...a9fca366
+//@include mixins.font(16px, 19.5px, 700);
+//color: var(--gray-95);

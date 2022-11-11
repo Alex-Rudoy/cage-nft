@@ -3,4 +3,5 @@ export type AvatarProps = {
   msgsValue?: number | null;
   className?: string;
   isOnline?: boolean;
+  bg?: string;
 };

@@ -7,6 +7,9 @@
   gap: 1px;
   padding: 4px;
   border-radius: var(--border-radius-10);
+  &_full {
+    width: 100%;
+  }
   @include mixins.atMobile() {
     width: 100%;
     justify-content: space-around;
@@ -33,6 +36,10 @@
   &_md {
     width: 110px;
     height: 34px;
+  }
+  &_full {
+    width: 100%;
+    height: 39px;
   }
   
   &_active {

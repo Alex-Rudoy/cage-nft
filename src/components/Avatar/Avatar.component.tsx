@@ -3,11 +3,13 @@ import classNames from 'classnames';
 
 import { AvatarProps } from './Avatar.types';
 
+import cn from 'classnames';
 import styles from './Avatar.module.scss';
 
 export const AvatarComponent: React.FC<AvatarProps> = ({
   src = '/public/images/card/ava.png',
   className,
+  bg,
   msgsValue,
   isOnline,
 }) => {
@@ -15,7 +17,7 @@ export const AvatarComponent: React.FC<AvatarProps> = ({
     [styles[`onlineBadge__offline`]]: !isOnline,
   });
   return (
-    <div className={styles.avatar}>
+    <div className={cn(styles.avatar, { [styles[`avatar_${bg}`]]: bg })}>
       {src ? (
         <>
           <img src={src} alt="ava" />

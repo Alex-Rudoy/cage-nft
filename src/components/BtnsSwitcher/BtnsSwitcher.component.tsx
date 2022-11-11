@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import { BtnsSwitcherProps } from './BtnsSwitcher.types';
 
@@ -12,12 +12,13 @@ export const BtnsSwitcherComponent: React.FC<BtnsSwitcherProps> = ({
   size,
 }) => {
   return (
-    <div className={styles.wrap}>
+    <div className={cn(styles.wrap, { [styles[`wrap_${size}`]]: size })}>
       {buttonConfigList.map((el) => (
         <button
-          className={classNames(styles.switch_btn, {
+          className={cn(styles.switch_btn, {
             [styles.switch_btn_active]: currentButtonId === el.id,
             [styles[`switch_btn_${size}`]]: size,
+            [styles[`wrap_${size}`]]: size,
           })}
           key={el.id}
           onClick={() => setCurrentButtonId(el.id)}

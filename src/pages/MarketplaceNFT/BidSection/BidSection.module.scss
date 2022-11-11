@@ -1,0 +1,84 @@
+@use '../../../styles/mixins.scss';
+
+.bid {
+  min-height: 91px;
+  padding: 18px 0 17px 0;
+  background-color: var(--white);
+  border-radius: var(--border-radius-12);
+  
+  .bidInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-10);
+    padding: 18px 23px;
+    
+    .higestAmount {
+      @include mixins.font(28px, 34px, 500);
+    }
+    
+    .auctionEnds {
+      .bidTitle {
+        @include mixins.font(16px, 19.5px, 500);
+        color: var(--gray-80);
+      }
+      
+      .date {
+        @include mixins.font(18px, 24.7px, 500);
+        color: var(--gray-95);
+        
+        span {
+          color: var(--gray-80);
+          padding: 0 6px;
+        }
+      }
+      
+      text-align: right;
+      
+      .date {
+      
+      }
+    }
+  }
+  
+  .fractionsCalc {
+    padding: 11px 19px 16px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    .amountInput {
+      width: 20vw;
+    }
+    
+    span {
+      @include mixins.font(14px, 16.7px, 400);
+      color: var(--gray-95);
+      margin-bottom: 4px;
+    }
+    
+    .clalculatedFract {
+      width: 14vw;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: var(--border-radius-8);
+      border: 1px solid var(--gray-20);
+      padding: 15px 16px 15px 21px;
+      .fractAmount {
+        @include mixins.font(16px, 19.5px, 500);
+        color: var(--gray-95);
+      }
+    }
+  }
+}
+
+.btnsGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 23px 0 23px;
+  border-top: 1px solid var(--gray-10);
+}

@@ -4,16 +4,46 @@ import { IconsEnum, SvgIcon } from '@components/SvgIcon';
 import { ThemeToggleComponent } from '@components/ThemeToggle';
 import { getUUID } from '@utils/getUUID';
 import React, { useState } from 'react';
-
-// import { HeaderProps } from './Header.types';
+import { ethers } from 'ethers';
 import styles from './Header.module.scss';
 
-export const HeaderComponent: React.FC<any> = () => {
+export const HeaderComponent: React.FC = () => {
   const [check, setCheck] = useState(true);
-  const [checkBox, setCheckBox] = useState(true);
   const [value, setValue] = useState('');
-  const [active, setActive] = useState('');
+  const [userAccount, setUserAccount] = useState(null);
+  const [balance, setBalance] = useState(0);
 
+  const onConnect = () => {
+    if (window.ethereum) {
+      window.ethereum
+        .request({ method: 'eth_requestAccounts' })
+        .then((account) => {
+          setUserAccount(account[0]);
+          getBalance(account[0]);
+        });
+      window.ethereum.on('accountChanged', onConnect);
+      window.ethereum.on('chainChanged', chainChanedHandler);
+    } else {
+      alert('Place install metamask');
+    }
+  };
+
+  const getBalance = (account) => {
+    window.ethereum
+      .request({
+        method: 'eth_getBalance',
+        params: [account, 'latest'],
+      })
+      .then((balance) => {
+        setBalance(+ethers.utils.formatEther(balance));
+      });
+  };
+
+  const chainChanedHandler = () => {
+    window.location.reload();
+  };
+  console.log(userAccount);
+  console.log(balance);
   return (
     <div className={styles.wrap}>
       <div className={styles.headMobile}>
@@ -63,11 +93,6 @@ export const HeaderComponent: React.FC<any> = () => {
             },
           ]}
         />
-        {/*<InputComponent*/}
-        {/*  value={value}*/}
-        {/*  id={getUUID()}*/}
-        {/*  onChange={(e) => setValue(e.target.value)}*/}
-        {/*/>*/}
       </div>
       <div className={styles.btnsBlock}>
         <div className={styles.toggler}>
@@ -94,6 +119,7 @@ export const HeaderComponent: React.FC<any> = () => {
             text={'Connect wallet'}
             variant={ButtonVariantEnum.primary}
             icon={IconsEnum.heart}
+            onClick={onConnect}
           />
         </div>
       </div>

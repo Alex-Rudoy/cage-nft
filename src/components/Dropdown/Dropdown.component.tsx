@@ -25,7 +25,7 @@ export const DropdownComponent = <T extends string | number>({
   preFilteredOptions,
   showSearch,
   setValue,
-  placeholder = '',
+  placeholder = 'R',
   value,
   width = 320,
   emptyStateText,
@@ -36,8 +36,8 @@ export const DropdownComponent = <T extends string | number>({
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
   const [check4, setCheck4] = useState(false);
-  const [valueMin, setValueMin] = useState<number | null>(null);
-  const [valueMax, setValueMax] = useState<number | null>(null);
+  const [valueMin, setValueMin] = useState('');
+  const [valueMax, setValueMax] = useState('');
 
   const [buttonList1CurrentId, setButtonList1CurrentId] = useState<
     number | null
@@ -117,40 +117,10 @@ export const DropdownComponent = <T extends string | number>({
     },
   ];
 
-  // const dot = (color = 'transparent') => ({
-  //   alignItems: 'center',
-  //   display: 'flex',
-  //
-  //   ':before': {
-  //     backgroundColor: color,
-  //     // borderRadius: 10,
-  //     content: '" "',
-  //     backgroundImage: '../../../public/icons/header/arrowupdown.svg',
-  //     backgroundRepeat: false,
-  //     backgroundPosition: 'center',
-  //     display: 'block',
-  //     marginRight: 12,
-  //     height: 12,
-  //     width: 15,
-  //   },
-  // });
-  const { Option } = components;
-  // const IconOption = (props) => (
-  //   <Option {...props}>
-  //     <img
-  //       src={require('./' + props.data.icon)}
-  //       style={{ width: 20 }}
-  //       alt={props.data.label}
-  //     />
-  //     {props.data.label}
-  //   </Option>
-  // );
-
   const colourStyles = {
     control: (styles) => ({
       ...styles,
       backgroundColor: 'white',
-      // backgroundImage: '../../../public/icons/header/arrowupdown.svg',
       width: 290,
       borderRadius: 10,
       borderColor: '#F1F3F4',
@@ -163,9 +133,6 @@ export const DropdownComponent = <T extends string | number>({
         color: data.color,
       };
     },
-    // input: (styles) => ({ ...styles, ...dot() }),
-    // placeholder: (styles) => ({ ...styles, ...dot('transparent') }),
-    // singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
   };
 
   return (
@@ -192,7 +159,6 @@ export const DropdownComponent = <T extends string | number>({
           styles={colourStyles}
           defaultValue={optio[0]}
           components={{
-            // Option: IconOption,
             IndicatorSeparator: () => null,
           }}
         />
@@ -268,7 +234,11 @@ export const DropdownComponent = <T extends string | number>({
               text={'Clear All'}
               variant={ButtonVariantEnum.secondaryFilt}
             />
-            <Button text={'Cancel'} variant={ButtonVariantEnum.secondaryFilt} />
+            <Button
+              text={'Cancel'}
+              variant={ButtonVariantEnum.secondaryFilt}
+              onClick={() => setIsOpen(false)}
+            />
           </div>
         </div>
       </DropdownBase>

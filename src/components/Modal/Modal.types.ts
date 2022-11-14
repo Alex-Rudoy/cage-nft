@@ -8,4 +8,5 @@ export type ModalProps = {
   isVisible: boolean;
   onClose: () => void;
   renderCustomCross?: (onClose: () => void) => React.ReactNode;
+  StepType?: 'count' | 'Wallet' | 'confirm';
 };

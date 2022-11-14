@@ -1,13 +1,10 @@
 import { BtnsSwitcher } from '@components/BtnsSwitcher';
 import { Button, ButtonVariantEnum } from '@components/Button';
-import { CardCollection } from '@components/CardCollection';
 import { CardNFT } from '@components/CardNFT';
 import { BUTTON_CONFIG_LIST_2 } from '@components/Dropdown/constants';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
-
-// import styles from './Home.module.scss';
 
 export const HomeComponent: React.FC = () => {
   const [buttonList1CurrentId, setButtonList1CurrentId] = useState<

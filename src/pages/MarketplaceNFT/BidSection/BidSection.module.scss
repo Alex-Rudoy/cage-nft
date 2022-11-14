@@ -1,5 +1,12 @@
 @use '../../../styles/mixins.scss';
 
+.nnn {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: #47C690;
+}
+
 .bid {
   min-height: 91px;
   padding: 18px 0 17px 0;

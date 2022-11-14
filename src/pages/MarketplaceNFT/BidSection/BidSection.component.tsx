@@ -1,11 +1,20 @@
 import { Button, ButtonVariantEnum } from '@components/Button';
 import { InputComponent } from '@components/Input/Input.component';
+import { ModalComponent } from '@components/Modal/Modal.component';
+import { Addpurchanse } from '@pages/MarketplaceNFT/Popups/Addpurchanse';
+import { ConfirmPurchanse } from '@pages/MarketplaceNFT/Popups/ConfirmPurchanse';
 import React, { useState } from 'react';
 import styles from './BidSection.module.scss';
 // import { BidSectionProps } from './BidSection.types';
 
 export const BidSectionComponent: React.FC = () => {
   const [value, setValue] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const completeStep = () => {
+    setCurrentStep((cur) => cur + 1);
+  };
+
   return (
     <div className={styles.bid}>
       <div className={styles.bidInfo}>
@@ -40,7 +49,12 @@ export const BidSectionComponent: React.FC = () => {
         </div>
       </div>
       <div className={styles.btnsGroup}>
-        <Button size={'lg-2'} width={'md'} text={'Place a bid'} />
+        <Button
+          size={'lg-2'}
+          width={'md'}
+          text={'Place a bid'}
+          onClick={() => setIsVisible(!isVisible)}
+        />
         <Button
           variant={ButtonVariantEnum.light}
           size={'lg-2'}
@@ -48,6 +62,14 @@ export const BidSectionComponent: React.FC = () => {
           text={'Buy now per 2.00093 ETH'}
         />
       </div>
+      <ModalComponent
+        onClose={() => setIsVisible(!isVisible)}
+        isVisible={isVisible}
+      >
+        {currentStep === 0 && <ConfirmPurchanse completeStep={completeStep} />}
+        {currentStep === 1 && <Addpurchanse completeStep={completeStep} />}
+        {currentStep === 2 && <div>Congratulations!</div>}
+      </ModalComponent>
     </div>
   );
 };

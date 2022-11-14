@@ -11,7 +11,7 @@
 
   &.backdrop_enabled {
     backdrop-filter: blur(2px);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(238, 243, 248, 0.4);
     z-index: 10;
   }
   // This is for Flow component
@@ -26,10 +26,9 @@
   max-height: 100vh;
   position: relative;
   background: var(--white);
-  border: 1px solid var(--gray-200);
   box-sizing: border-box;
   box-shadow: var(--shadow-xl);
-  border-radius: 6px;
+  border-radius: var(--border-radius-10);
   overflow-y: auto;
 }
 

@@ -19,7 +19,7 @@ export const MarketplaceNFTComponent: React.FC = () => {
         </div>
         <div className={styles.rightBlock}>
           <HeadInfoSection />
-          <FractionPriceSection variant={null} />
+          <FractionPriceSection variant={1} />
           <BidSection />
           <InformationSection />
         </div>

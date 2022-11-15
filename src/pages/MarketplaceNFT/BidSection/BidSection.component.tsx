@@ -5,7 +5,6 @@ import { Addpurchanse } from '@pages/MarketplaceNFT/Popups/Addpurchanse';
 import { ConfirmPurchanse } from '@pages/MarketplaceNFT/Popups/ConfirmPurchanse';
 import React, { useState } from 'react';
 import styles from './BidSection.module.scss';
-// import { BidSectionProps } from './BidSection.types';
 
 export const BidSectionComponent: React.FC = () => {
   const [value, setValue] = useState('');
@@ -13,6 +12,16 @@ export const BidSectionComponent: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const completeStep = () => {
     setCurrentStep((cur) => cur + 1);
+  };
+
+  const stepBack = () => {
+    currentStep && setCurrentStep((cur) => cur - 1);
+    !currentStep && setIsVisible(false);
+  };
+
+  const handleCloseModal = () => {
+    setIsVisible(!isVisible);
+    setCurrentStep(0);
   };
 
   return (
@@ -62,12 +71,13 @@ export const BidSectionComponent: React.FC = () => {
           text={'Buy now per 2.00093 ETH'}
         />
       </div>
-      <ModalComponent
-        onClose={() => setIsVisible(!isVisible)}
-        isVisible={isVisible}
-      >
-        {currentStep === 0 && <ConfirmPurchanse completeStep={completeStep} />}
-        {currentStep === 1 && <Addpurchanse completeStep={completeStep} />}
+      <ModalComponent onClose={handleCloseModal} isVisible={isVisible}>
+        {currentStep === 0 && (
+          <ConfirmPurchanse stepBack={stepBack} completeStep={completeStep} />
+        )}
+        {currentStep === 1 && (
+          <Addpurchanse stepBack={stepBack} completeStep={completeStep} />
+        )}
         {currentStep === 2 && <div>Congratulations!</div>}
       </ModalComponent>
     </div>

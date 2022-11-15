@@ -120,11 +120,14 @@
       width: 100%;
     }
     &_sm {
-      width: 140px;
+      width: 142px;
     }
     &_md {
       width: 90%;
       max-width: 234px;
+    }
+    &_lg {            //modal
+      width: 263px;
     }
   }
 

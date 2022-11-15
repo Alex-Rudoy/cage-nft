@@ -5,39 +5,65 @@ import { ConfirmPurchanseProps } from './ConfirmPurchanse.types';
 
 export const ConfirmPurchanseComponent: React.FC<ConfirmPurchanseProps> = ({
   completeStep,
+  stepBack,
 }) => {
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<number>(1);
   const handleIncrement = () => {
     if (amount) setAmount(amount - 1);
   };
   const handleDecrement = () => setAmount(amount + 1);
   const currentPrice = 2.00093;
-  const subtotal = ('' + currentPrice * amount).match(/\d\.\d{5}/);
+  const subtotal = (currentPrice * amount).toFixed(5);
   return (
     <>
       <div className={styles.wrap}>
         <h3>Confirm your purchase</h3>
-        <div>
-          <div>
-            <img src="" alt="" />
+        <div className={styles.contentContainer}>
+          <div className={styles.image}>
+            <div className={styles.imgwrap}>
+              <img src={'/images/card/111.png'} alt="nft-img" />
+            </div>
           </div>
           <div className={styles.nftInfo}>
-            <div>
-              <span>Amount</span>
-              <div onClick={handleIncrement}>-</div>
-              {amount}
-              <div onClick={handleDecrement}>+</div>
+            <div className={styles.counterBlock}>
+              <span className={styles.span}>Amount</span>
+              <div className={styles.countBtn} onClick={handleIncrement}>
+                -
+              </div>
+              <span className={styles.amount}>{amount}</span>
+              <div className={styles.countBtn} onClick={handleDecrement}>
+                +
+              </div>
+            </div>
+            <div className={styles.title}>King of Da Street #8839</div>
+            <div className={styles.subtitle}>
+              <span className={styles.span}>Collection</span> HAPEAPE club
+            </div>
+            <div className={styles.price}>
+              <h3>2.00093 ETH</h3>
+              <span>One 1.030000 ETH</span>
             </div>
           </div>
         </div>
-        <div>
-          <span>Total:</span>
-          <span>Subtotal:{subtotal}</span>
+        <div className={styles.totPrice}>
+          <div className={styles.displayPrice}>
+            <span>Total</span>
+            <span>{subtotal}</span>
+          </div>
+          <div className={styles.displayPrice}>
+            <span>Subtotal</span>
+            <span>{subtotal}</span>
+          </div>
         </div>
         <div className={styles.btnsBlock}>
-          <Button text={'Cancel'} variant={ButtonVariantEnum.secondaryFilt} />
           <Button
-            width={'full'}
+            width={'sm'}
+            text={'Cancel'}
+            variant={ButtonVariantEnum.secondaryFilt}
+            onClick={stepBack}
+          />
+          <Button
+            width={'lg'}
             text={'Confirm'}
             variant={ButtonVariantEnum.primary}
             onClick={completeStep}

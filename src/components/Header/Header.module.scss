@@ -2,20 +2,18 @@
 
 .wrap {
   display: flex;
-  //align-items: center;
   position: fixed;
   max-width: 1440px;
   right: 0;
   left: 0;
   margin: 0 auto;
   padding:10px 20px;
-  z-index: 99;
+  z-index: 10;
   @include mixins.atMobile() {
     position: unset;
     padding:10px 15px;
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
     align-content: space-between;
   }
   .logo {

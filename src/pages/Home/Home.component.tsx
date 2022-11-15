@@ -63,7 +63,7 @@ export const HomeComponent: React.FC = () => {
           />
         </div>
         <div className={styles.topNFTBlock}>
-          <Link to={`/marketplace/777`}>
+          <Link className={styles.linkToNFTp} to={`/marketplace/777`}>
             <CardNFT
               id={'777'}
               currentButtonId={buttonList2CurrentId}

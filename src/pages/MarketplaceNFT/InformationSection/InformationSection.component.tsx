@@ -123,7 +123,7 @@ export const InformationSectionComponent: React.FC = () => {
       )}
       {buttonList2CurrentId === 234 && (
         <div className={styles.bids}>
-          {bids.map((el, i) => (
+          {history.map((el, i) => (
             <div key={i} className={styles.bidsItem}>
               <Avatar src={''} msgsValue={null} isOnline={false} bg={'gray'} />
               <div className={styles.info}>

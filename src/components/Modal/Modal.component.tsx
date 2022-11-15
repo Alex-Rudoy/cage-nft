@@ -51,7 +51,7 @@ export const ModalComponent: React.FC<ModalProps> = ({
     renderCustomCross(onClose)
   ) : (
     <div className={styles.cross} onClick={onClose}>
-      <SvgIcon src={IconsEnum.cross} color="gray-40" size={16} />
+      <SvgIcon src={IconsEnum.cross} color="gray-50" size={20} />
     </div>
   );
 
@@ -69,7 +69,7 @@ export const ModalComponent: React.FC<ModalProps> = ({
           ref={backdropRef}
         >
           <div className={modalClass} style={customStyles}>
-            {cross}
+            <div className={styles.header}> {cross}</div>
             {children}
           </div>
         </div>

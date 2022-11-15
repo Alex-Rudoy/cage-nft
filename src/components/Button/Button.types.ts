@@ -14,7 +14,7 @@ export type ButtonProps = {
   id?: string;
   variant?: ButtonVariantEnum;
   size?: 'exsm' | 'sm' | 'md' | 'mds' | 'lg' | 'lg-2' | 'mob' | 'lgETH';
-  width?: 'full' | 'content' | 'md';
+  width?: 'full' | 'content' | 'sm' | 'md' | 'lg';
   icon?: IconsEnum;
   iconPosition?: 'left' | 'right';
   onClick?: (

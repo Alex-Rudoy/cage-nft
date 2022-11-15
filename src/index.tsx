@@ -11,14 +11,8 @@ import App from './App';
 import './styles/index.scss';
 
 ReactDOM.render(
-  <StrictMode>
-    {/*<MoralisProvider appId="xxxxxxxx" serverUrl="xxxxxxxx">*/}
-    {/*<Provider store={store}>*/}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    {/*</Provider>*/}
-    {/*</MoralisProvider>*/}
-  </StrictMode>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );

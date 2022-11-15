@@ -6,7 +6,7 @@
   width: 280px;
   min-height: 900px;
   padding: 0 21px 0 13px;
-  z-index: 9;
+  z-index: 11;
   @include mixins.flex(column,start);
   @include mixins.atTablet() {
     &_hide {
